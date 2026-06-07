@@ -857,17 +857,17 @@
   {
     "id": 57,
     "category": "parking",
-    "question_en": "You want to park facing downhill on a road next to a kerb. Which way should you turn your front wheels?",
-    "question_zh": "你想在有路緣的下坡路旁停車，前輪應轉向哪個方向？",
+    "question_en": "You want to park facing uphill on a road next to a kerb. Which way should you turn your front wheels?",
+    "question_zh": "你想在有路緣的上坡路旁停車，前輪應轉向哪個方向？",
     "options": [
-      { "en": "Turn wheels away from the kerb (to the left)", "zh": "前輪遠離路緣（向左）" },
-      { "en": "Turn wheels toward the kerb (to the right)", "zh": "前輪朝向路緣（向右）" },
+      { "en": "Turn wheels toward the kerb (to the left)", "zh": "前輪朝向路緣（向左）" },
+      { "en": "Turn wheels away from the kerb (to the right)", "zh": "前輪遠離路緣（向右）" },
       { "en": "Keep wheels straight against the kerb", "zh": "車輪保持直行緊靠路緣" },
       { "en": "Direction does not matter as long as the handbrake is on", "zh": "只要拉上手煞車，方向不重要" }
     ],
     "correct": 1,
-    "explanation_en": "When parking facing downhill next to a kerb, turn your front wheels toward the kerb (right). If the vehicle rolls, the kerb will prevent it from moving into traffic.",
-    "explanation_zh": "面朝下坡靠路緣停車時，前輪應朝向路緣（向右）。若車輛滑動，路緣會阻止車輛衝入車道。"
+    "explanation_en": "When parking facing uphill next to a kerb, turn your front wheels away from the kerb (right). New Zealand drives on the left, so the kerb is on your left — if the car rolls backwards, a wheel catches the kerb and stops it rolling into traffic.",
+    "explanation_zh": "面朝上坡靠路緣停車時，前輪應遠離路緣（向右）。紐西蘭靠左行駛，路緣在你的左側；若車輛向後滑動，車輪會卡住路緣，阻止車輛滑入車道。"
   },
   {
     "id": 58,
@@ -1280,13 +1280,13 @@
     "question_en": "When parking facing downhill on a steep road with a kerb, which way do you turn the front wheels?",
     "question_zh": "在有路緣的陡坡上面朝下坡停車時，前輪應轉向哪個方向？",
     "options": [
-      { "en": "Turn wheels to the left (away from the kerb)", "zh": "前輪向左轉（遠離路緣）" },
+      { "en": "Turn wheels to the left (toward the kerb)", "zh": "前輪向左轉（朝向路緣）" },
       { "en": "Keep wheels straight along the kerb", "zh": "車輪保持直行靠著路緣" },
-      { "en": "Turn wheels to the right (toward the kerb)", "zh": "前輪向右轉（朝向路緣）" },
+      { "en": "Turn wheels to the right (away from the kerb)", "zh": "前輪向右轉（遠離路緣）" },
       { "en": "Direction does not matter if the handbrake is fully applied", "zh": "只要手煞車完全拉緊，方向無所謂" }
     ],
-    "correct": 2,
-    "explanation_en": "When parking facing downhill next to a kerb, turn the front wheels toward the kerb (right) and apply the handbrake. If the car rolls, the kerb prevents it from moving into traffic.",
-    "explanation_zh": "在有路緣的陡坡面朝下坡停車時，前輪應朝向路緣（向右）並拉起手煞車。若車輛滑動，路緣可防止車輛衝入車道。"
+    "correct": 0,
+    "explanation_en": "When parking facing downhill next to a kerb, turn the front wheels toward the kerb (left) and apply the handbrake. New Zealand drives on the left, so the kerb is on your left — if the car rolls forward, the kerb stops it moving into traffic.",
+    "explanation_zh": "在有路緣的陡坡面朝下坡停車時，前輪應朝向路緣（向左）並拉起手煞車。紐西蘭靠左行駛，路緣在你的左側；若車輛向前滑動，路緣可阻止車輛衝入車道。"
   }
 ]
