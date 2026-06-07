@@ -40,7 +40,7 @@ export default function QuestionCard({
           <button
             type="button"
             onClick={() => setShowChinese((v) => !v)}
-            className="rounded-lg border border-gray-200 px-2 py-1 text-xs text-gray-500 hover:border-blue-300 hover:text-blue-600"
+            className="w-[4rem] shrink-0 rounded-lg border border-gray-200 py-1 text-center text-xs text-gray-500 transition hover:border-blue-300 hover:text-blue-600"
           >
             🌐 {showChinese ? "收起" : "中文"}
           </button>
@@ -49,7 +49,7 @@ export default function QuestionCard({
             <button
               type="button"
               onClick={() => onToggleFavorite(question.id)}
-              className="rounded-lg border border-gray-200 px-2 py-1 text-xs leading-none transition hover:border-yellow-400 hover:bg-yellow-50"
+              className="w-[4.5rem] shrink-0 rounded-lg border border-gray-200 py-1 text-center text-xs leading-none transition hover:border-yellow-400 hover:bg-yellow-50"
               aria-label={isFavorited ? "Remove from favorites" : "Add to favorites"}
             >
               {isFavorited ? "⭐ 已收藏" : "☆ 收藏"}

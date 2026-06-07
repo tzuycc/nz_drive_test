@@ -9,7 +9,7 @@ export interface Option {
 /** A single multiple-choice question. */
 export interface Question {
   id: number;
-  category: "core" | "signs" | "parking" | "emergency" | "specialist";
+  category: "core" | "signs" | "parking" | "emergency" | "specialist" | "road_position" | "behaviour" | "intersection";
   question_en: string;
   question_zh: string;
   options: Option[];        // exactly 4

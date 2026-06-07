@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import type { Question, AnsweredQuestion } from "@/lib/types";
 import { pickExam } from "@/lib/quiz";
 import QuestionCard from "@/components/QuestionCard";
@@ -12,7 +12,8 @@ interface Props {
 }
 
 export default function ExamScreen({ bank, onSubmit, onExit }: Props) {
-  const questions = useMemo(() => pickExam(bank), [bank]);
+  // Stable on mount — useMemo was unstable in React 19 across re-renders
+  const [questions] = useState<Question[]>(() => pickExam(bank));
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<(number | null)[]>(
     () => Array(questions.length).fill(null)
