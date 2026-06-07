@@ -1,5 +1,8 @@
+"use client";
+
 import type { AnsweredQuestion } from "@/lib/types";
 import { scoreExam } from "@/lib/quiz";
+import { useFavorites } from "@/lib/favorites";
 import QuestionCard from "@/components/QuestionCard";
 import ExplanationPanel from "@/components/ExplanationPanel";
 
@@ -11,6 +14,27 @@ interface Props {
 
 export default function ResultScreen({ answers, onRetry, onHome }: Props) {
   const { correct, total, passed } = scoreExam(answers);
+  const { isFavorited, toggle } = useFavorites();
+
+  // Split into wrong first, then correct
+  const wrong = answers.filter((a) => a.selected !== a.question.correct);
+  const right = answers.filter((a) => a.selected === a.question.correct);
+
+  const renderQuestion = (a: AnsweredQuestion, i: number, label: string) => (
+    <div key={a.question.id}>
+      <p className="mb-2 text-sm font-semibold text-gray-500">{label}{i + 1}</p>
+      <QuestionCard
+        key={a.question.id}
+        question={a.question}
+        selected={a.selected}
+        revealCorrect
+        onSelect={() => {}}
+        isFavorited={isFavorited(a.question.id)}
+        onToggleFavorite={toggle}
+      />
+      <ExplanationPanel question={a.question} selected={a.selected} />
+    </div>
+  );
 
   return (
     <div className="mx-auto max-w-xl">
@@ -43,21 +67,27 @@ export default function ResultScreen({ answers, onRetry, onHome }: Props) {
         </button>
       </div>
 
-      <h2 className="mt-8 mb-4 text-xl font-bold text-gray-900">Review 題目回顧</h2>
-      <div className="space-y-6">
-        {answers.map((a, i) => (
-          <div key={a.question.id}>
-            <p className="mb-2 text-sm font-semibold text-gray-500">Q{i + 1}</p>
-            <QuestionCard
-              question={a.question}
-              selected={a.selected}
-              revealCorrect
-              onSelect={() => {}}
-            />
-            <ExplanationPanel question={a.question} selected={a.selected} />
+      {wrong.length > 0 && (
+        <>
+          <h2 className="mt-8 mb-4 text-xl font-bold text-red-600">
+            ❌ 答錯的題目（{wrong.length} 題）
+          </h2>
+          <div className="space-y-6">
+            {wrong.map((a, i) => renderQuestion(a, i, "✗ Q"))}
           </div>
-        ))}
-      </div>
+        </>
+      )}
+
+      {right.length > 0 && (
+        <>
+          <h2 className="mt-8 mb-4 text-xl font-bold text-emerald-600">
+            ✅ 答對的題目（{right.length} 題）
+          </h2>
+          <div className="space-y-6">
+            {right.map((a, i) => renderQuestion(a, i, "✓ Q"))}
+          </div>
+        </>
+      )}
     </div>
   );
 }

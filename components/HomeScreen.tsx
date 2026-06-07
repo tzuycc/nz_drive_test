@@ -1,9 +1,16 @@
 interface Props {
   onStartPractice: () => void;
   onStartExam: () => void;
+  favoritesCount: number;
+  onStartFavorites: () => void;
 }
 
-export default function HomeScreen({ onStartPractice, onStartExam }: Props) {
+export default function HomeScreen({
+  onStartPractice,
+  onStartExam,
+  favoritesCount,
+  onStartFavorites,
+}: Props) {
   return (
     <div className="mx-auto max-w-xl text-center">
       <h1 className="text-3xl font-bold text-gray-900">
@@ -30,6 +37,17 @@ export default function HomeScreen({ onStartPractice, onStartExam }: Props) {
           className="w-full rounded-xl bg-emerald-600 px-6 py-4 text-lg font-semibold text-white transition hover:bg-emerald-700"
         >
           Exam Simulation 模擬考（35 題）
+        </button>
+        <button
+          type="button"
+          onClick={onStartFavorites}
+          disabled={favoritesCount === 0}
+          className="w-full rounded-xl bg-amber-400 px-6 py-4 text-lg font-semibold text-white transition hover:bg-amber-500 disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          ⭐ Practice Favorites 練習收藏題目
+          {favoritesCount > 0 && (
+            <span className="ml-2 text-sm opacity-80">({favoritesCount})</span>
+          )}
         </button>
       </div>
     </div>

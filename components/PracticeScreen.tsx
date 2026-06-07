@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import type { Question } from "@/lib/types";
 import { shuffle } from "@/lib/quiz";
+import { useFavorites } from "@/lib/favorites";
 import QuestionCard from "@/components/QuestionCard";
 import ExplanationPanel from "@/components/ExplanationPanel";
 
@@ -15,6 +16,7 @@ export default function PracticeScreen({ bank, onExit }: Props) {
   const questions = useMemo(() => shuffle(bank), [bank]);
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
+  const { isFavorited, toggle } = useFavorites();
 
   const current = questions[index];
   const answered = selected !== null;
@@ -37,11 +39,15 @@ export default function PracticeScreen({ bank, onExit }: Props) {
         </button>
       </div>
 
+      {/* key={current.id} resets QuestionCard internal state (showChinese) on question change */}
       <QuestionCard
+        key={current.id}
         question={current}
         selected={selected}
         revealCorrect={answered}
         onSelect={(i) => !answered && setSelected(i)}
+        isFavorited={isFavorited(current.id)}
+        onToggleFavorite={toggle}
       />
 
       {answered && <ExplanationPanel question={current} selected={selected} />}

@@ -1,12 +1,17 @@
+"use client";
+
+import { useState } from "react";
 import type { Question } from "@/lib/types";
 import SignIcon from "@/components/SignIcon";
 
 interface Props {
   question: Question;
   selected: number | null;
-  /** When set, locks choices and colours them (practice/result review). */
   revealCorrect?: boolean;
   onSelect: (index: number) => void;
+  /** If provided, show a ⭐ favorite toggle button */
+  isFavorited?: boolean;
+  onToggleFavorite?: (id: number) => void;
 }
 
 export default function QuestionCard({
@@ -14,7 +19,11 @@ export default function QuestionCard({
   selected,
   revealCorrect = false,
   onSelect,
+  isFavorited = false,
+  onToggleFavorite,
 }: Props) {
+  const [showChinese, setShowChinese] = useState(false);
+
   return (
     <div className="rounded-2xl bg-white p-6 shadow-md">
       {question.sign && (
@@ -22,8 +31,36 @@ export default function QuestionCard({
           <SignIcon sign={question.sign} />
         </div>
       )}
-      <p className="text-lg font-semibold text-gray-900">{question.question_en}</p>
-      <p className="mt-1 text-base text-gray-500">{question.question_zh}</p>
+
+      {/* Question header: text + action buttons */}
+      <div className="flex items-start justify-between gap-3">
+        <p className="text-lg font-semibold text-gray-900">{question.question_en}</p>
+        <div className="flex shrink-0 items-center gap-2">
+          {/* Chinese toggle */}
+          <button
+            type="button"
+            onClick={() => setShowChinese((v) => !v)}
+            className="rounded-lg border border-gray-200 px-2 py-1 text-xs text-gray-500 hover:border-blue-300 hover:text-blue-600"
+          >
+            🌐 {showChinese ? "收起" : "中文"}
+          </button>
+          {/* Favorite toggle — only if prop provided */}
+          {onToggleFavorite && (
+            <button
+              type="button"
+              onClick={() => onToggleFavorite(question.id)}
+              className="text-xl leading-none"
+              aria-label={isFavorited ? "Remove from favorites" : "Add to favorites"}
+            >
+              {isFavorited ? "⭐" : "☆"}
+            </button>
+          )}
+        </div>
+      </div>
+
+      {showChinese && (
+        <p className="mt-1 text-base text-gray-500">{question.question_zh}</p>
+      )}
 
       <ul className="mt-5 space-y-3">
         {question.options.map((opt, i) => {
@@ -45,7 +82,9 @@ export default function QuestionCard({
                 className={`w-full rounded-xl border-2 px-4 py-3 text-left transition ${style} disabled:cursor-default`}
               >
                 <span className="block font-medium text-gray-900">{opt.en}</span>
-                <span className="block text-sm text-gray-500">{opt.zh}</span>
+                {showChinese && (
+                  <span className="block text-sm text-gray-500">{opt.zh}</span>
+                )}
               </button>
             </li>
           );
