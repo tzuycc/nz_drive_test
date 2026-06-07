@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { Question } from "@/lib/types";
 import { shuffle } from "@/lib/quiz";
+import { trackQuestionMastered } from "@/lib/analytics";
 import QuestionCard from "@/components/QuestionCard";
 import ExplanationPanel from "@/components/ExplanationPanel";
 
@@ -75,6 +76,7 @@ export default function PracticeScreen({ bank, onExit, isFavorited, onToggleFavo
             <button
               type="button"
               onClick={() => {
+                trackQuestionMastered(current.id);
                 onMastered(current.id);
                 if (isLast) onExit();
                 else next();

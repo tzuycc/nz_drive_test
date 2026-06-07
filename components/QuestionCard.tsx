@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { Question } from "@/lib/types";
 import SignIcon from "@/components/SignIcon";
+import { trackQuestionFavorited } from "@/lib/analytics";
 
 interface Props {
   question: Question;
@@ -48,7 +49,10 @@ export default function QuestionCard({
           {onToggleFavorite && (
             <button
               type="button"
-              onClick={() => onToggleFavorite(question.id)}
+              onClick={() => {
+                if (!isFavorited) trackQuestionFavorited(question.id);
+                onToggleFavorite(question.id);
+              }}
               className="w-[4.5rem] shrink-0 rounded-lg border border-gray-200 py-1 text-center text-xs leading-none transition hover:border-yellow-400 hover:bg-yellow-50"
               aria-label={isFavorited ? "Remove from favorites" : "Add to favorites"}
             >

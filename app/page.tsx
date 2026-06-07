@@ -5,6 +5,11 @@ import type { AnsweredQuestion, Question } from "@/lib/types";
 import rawQuestions from "@/data/questions.json";
 import { useFavorites } from "@/lib/favorites";
 import { useWrongBank } from "@/lib/wrongBank";
+import {
+  trackExamStarted,
+  trackExamCompleted,
+  trackPracticeStarted,
+} from "@/lib/analytics";
 import HomeScreen from "@/components/HomeScreen";
 import PracticeScreen from "@/components/PracticeScreen";
 import ExamScreen from "@/components/ExamScreen";
@@ -35,12 +40,12 @@ export default function Page() {
     <main className="min-h-screen bg-gray-50 px-4 py-10">
       {screen === "home" && (
         <HomeScreen
-          onStartPractice={() => setScreen("practice")}
-          onStartExam={() => setScreen("exam")}
+          onStartPractice={() => { trackPracticeStarted("all"); setScreen("practice"); }}
+          onStartExam={() => { trackExamStarted(); setScreen("exam"); }}
           favoritesCount={favoritesBank.length}
-          onStartFavorites={() => setScreen("favorites")}
+          onStartFavorites={() => { trackPracticeStarted("favorites"); setScreen("favorites"); }}
           wrongCount={wrongBank.length}
-          onStartWrongPractice={() => setScreen("wrong-practice")}
+          onStartWrongPractice={() => { trackPracticeStarted("wrong"); setScreen("wrong-practice"); }}
           onClearWrongBank={clearWrongBank}
         />
       )}
@@ -77,11 +82,15 @@ export default function Page() {
         <ExamScreen
           bank={BANK}
           onSubmit={(answers) => {
-            // Automatically add wrong answers to persistent wrong bank
             const ids = answers
               .filter((a) => a.selected !== a.question.correct)
               .map((a) => a.question.id);
             addWrong(ids);
+            // Track exam completion with score
+            const correct = answers.filter(
+              (a) => a.selected === a.question.correct
+            ).length;
+            trackExamCompleted(correct, answers.length);
             setExamAnswers(answers);
             setScreen("result");
           }}
