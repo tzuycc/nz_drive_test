@@ -1,0 +1,1292 @@
+[
+  {
+    "id": 1,
+    "category": "core",
+    "question_en": "Under normal driving conditions, what rule should you use to allow a safe following distance?",
+    "question_zh": "在正常行車狀況下，應使用什麼原則保持安全跟車距離？",
+    "options": [
+      { "en": "The two-second rule", "zh": "兩秒原則" },
+      { "en": "The four-second rule", "zh": "四秒原則" },
+      { "en": "The ten-metre rule", "zh": "十公尺原則" },
+      { "en": "The one-car-length rule", "zh": "一個車身距離原則" }
+    ],
+    "correct": 0,
+    "explanation_en": "In normal conditions use the two-second rule: pick a fixed point and make sure at least two seconds pass between the vehicle ahead passing it and you reaching it.",
+    "explanation_zh": "正常狀況下使用兩秒原則：選一個固定參考點，確認前車通過後至少兩秒你才抵達該點。"
+  },
+  {
+    "id": 2,
+    "category": "core",
+    "question_en": "What rule should you use to judge a safe following distance in wet or frosty conditions when driving a car?",
+    "question_zh": "開車遇到濕滑或結霜路面時，應使用什麼原則判斷安全跟車距離？",
+    "options": [
+      { "en": "The two-second rule", "zh": "兩秒原則" },
+      { "en": "The four-second rule", "zh": "四秒原則" },
+      { "en": "The six-second rule", "zh": "六秒原則" },
+      { "en": "The same as in dry conditions", "zh": "與乾燥路面相同" }
+    ],
+    "correct": 1,
+    "explanation_en": "In wet or frosty conditions, double the following distance to the four-second rule because stopping distances increase.",
+    "explanation_zh": "濕滑或結霜時，因煞停距離增加，應將跟車距離加倍為四秒原則。"
+  },
+  {
+    "id": 3,
+    "category": "core",
+    "question_en": "Which of the following is a reason to apply the four-second following distance rule?",
+    "question_zh": "下列哪一種情況需要使用四秒跟車距離原則？",
+    "options": [
+      { "en": "You are driving on a dry, clear motorway", "zh": "在乾燥晴朗的快速道路上行駛" },
+      { "en": "You are following a large truck that blocks your view ahead", "zh": "跟在一輛擋住前方視線的大卡車後面" },
+      { "en": "You are travelling at less than 50 km/h", "zh": "以低於時速50公里行駛" },
+      { "en": "You are driving downhill only", "zh": "僅在下坡路段行駛" }
+    ],
+    "correct": 1,
+    "explanation_en": "Apply the four-second rule when following a large vehicle that blocks your view, in poor conditions (wet/icy/fog), when towing, or on loose or gravel surfaces.",
+    "explanation_zh": "跟在擋住視線的大型車輛後面、路況惡劣（濕滑／結冰／濃霧）、拖車或行駛礫石路面時，應使用四秒原則。"
+  },
+  {
+    "id": 4,
+    "category": "core",
+    "question_en": "When must you turn on your headlights while driving?",
+    "question_zh": "行車時，何時必須開啟頭燈？",
+    "options": [
+      { "en": "When you cannot clearly see a person or vehicle 100 metres away", "zh": "當你無法清楚看見100公尺外的人或車輛時" },
+      { "en": "Only between sunset and sunrise", "zh": "僅在日落至日出之間" },
+      { "en": "Only in a tunnel longer than 500 metres", "zh": "僅在超過500公尺的隧道中" },
+      { "en": "When other drivers flash their lights at you", "zh": "當其他駕駛向你閃燈時" }
+    ],
+    "correct": 0,
+    "explanation_en": "You must turn on your headlights whenever you cannot clearly see a person or vehicle at a distance of 100 metres.",
+    "explanation_zh": "當你無法清楚看見100公尺外的人或車輛時，必須開啟頭燈。"
+  },
+  {
+    "id": 5,
+    "category": "core",
+    "question_en": "What should you do when you see blue and red flashing lights on a vehicle behind you?",
+    "question_zh": "當你看到後方車輛閃著藍紅燈光時，應怎麼做？",
+    "options": [
+      { "en": "Speed up to get out of the way quickly", "zh": "加速迅速讓路" },
+      { "en": "Maintain your speed and move to the left lane", "zh": "維持車速並移至左線" },
+      { "en": "Flash your hazard lights and continue driving", "zh": "開啟危險警示燈後繼續行駛" },
+      { "en": "Pull over and stop as soon as it is safe to do so", "zh": "盡快在安全地點靠邊停車" }
+    ],
+    "correct": 3,
+    "explanation_en": "Blue and red flashing lights mean police are signalling you to stop. Pull over and stop as soon as it is safe to do so.",
+    "explanation_zh": "藍紅閃燈表示警察要求你靠邊停車，應盡快在安全地點靠邊停車。"
+  },
+  {
+    "id": 6,
+    "category": "core",
+    "question_en": "What speed must you reduce to when passing a stationary school bus that is dropping off or picking up children?",
+    "question_zh": "超越正在讓學童上下車的停靠校車時，應減速至多少時速？",
+    "options": [
+      { "en": "30 km/h", "zh": "時速30公里" },
+      { "en": "10 km/h", "zh": "時速10公里" },
+      { "en": "50 km/h", "zh": "時速50公里" },
+      { "en": "20 km/h", "zh": "時速20公里" }
+    ],
+    "correct": 3,
+    "explanation_en": "You must slow to 20 km/h when passing a school bus that is stopped to let children on or off.",
+    "explanation_zh": "超越正在讓學童上下車的停靠校車時，必須減速至時速20公里。"
+  },
+  {
+    "id": 7,
+    "category": "core",
+    "question_en": "After passing another vehicle, how much clear road must there be in front of you before you move back into the lane?",
+    "question_zh": "完成超車後，你前方至少需要多少公尺的淨空道路才能回到原車道？",
+    "options": [
+      { "en": "50 metres", "zh": "50公尺" },
+      { "en": "100 metres", "zh": "100公尺" },
+      { "en": "200 metres", "zh": "200公尺" },
+      { "en": "30 metres", "zh": "30公尺" }
+    ],
+    "correct": 1,
+    "explanation_en": "After finishing a pass, there must be at least 100 metres of clear road ahead before you move back into the lane.",
+    "explanation_zh": "完成超車後，前方至少需要100公尺的淨空道路，才能回到原車道。"
+  },
+  {
+    "id": 8,
+    "category": "core",
+    "question_en": "What speed must you reduce to when approaching a crash scene indicated by an Accident sign?",
+    "question_zh": "看到「事故」警告號誌時，應減速至多少時速？",
+    "options": [
+      { "en": "30 km/h", "zh": "時速30公里" },
+      { "en": "50 km/h", "zh": "時速50公里" },
+      { "en": "20 km/h", "zh": "時速20公里" },
+      { "en": "40 km/h", "zh": "時速40公里" }
+    ],
+    "correct": 2,
+    "explanation_en": "From an Accident sign, you must reduce your speed to 20 km/h and maintain that until you have passed the crash site.",
+    "explanation_zh": "看到事故警告號誌後，必須減速至時速20公里，並維持到通過事故現場為止。"
+  },
+  {
+    "id": 9,
+    "category": "core",
+    "question_en": "If anyone is injured in a crash you are involved in, when must you report it to the Police?",
+    "question_zh": "若你涉及的車禍造成人員受傷，你必須在多久內向警察報告？",
+    "options": [
+      { "en": "Within 48 hours", "zh": "48小時內" },
+      { "en": "Within 72 hours", "zh": "72小時內" },
+      { "en": "Only if asked to by the Police", "zh": "僅在警察要求時" },
+      { "en": "As soon as possible and within 24 hours", "zh": "盡快並於24小時內" }
+    ],
+    "correct": 3,
+    "explanation_en": "If anyone is hurt in a crash, you must report it to the Police as soon as possible and within 24 hours.",
+    "explanation_zh": "若車禍造成人員受傷，你必須盡快向警察報告，且必須在24小時內完成。"
+  },
+  {
+    "id": 10,
+    "category": "core",
+    "question_en": "What type of headlights should you use when driving in fog?",
+    "question_zh": "在霧中行駛時，應使用哪種頭燈？",
+    "options": [
+      { "en": "High-beam headlights only", "zh": "僅使用遠光燈" },
+      { "en": "Hazard lights only", "zh": "僅使用危險警示燈" },
+      { "en": "No headlights — fog reduces visibility anyway", "zh": "不用頭燈——霧本來就會降低能見度" },
+      { "en": "Low-beam (dipped) headlights", "zh": "近光燈（低光束）" }
+    ],
+    "correct": 3,
+    "explanation_en": "In fog, use low-beam (dipped) headlights. High beam reflects off the fog and actually reduces visibility.",
+    "explanation_zh": "在霧中應使用近光燈。遠光燈會被霧氣反射，反而降低能見度。"
+  },
+  {
+    "id": 11,
+    "category": "core",
+    "question_en": "When must you dip (lower) your headlights at night?",
+    "question_zh": "夜間行車時，何時必須切換為近光燈（低光束）？",
+    "options": [
+      { "en": "When following another vehicle or when an oncoming vehicle is within 200 metres", "zh": "跟車行駛時，或對向車輛在200公尺以內時" },
+      { "en": "Only when another vehicle is within 50 metres", "zh": "僅在另一車輛距離50公尺以內時" },
+      { "en": "Only when you see a pedestrian on the road", "zh": "僅在看到路上有行人時" },
+      { "en": "Only in urban areas", "zh": "僅在市區道路上" }
+    ],
+    "correct": 0,
+    "explanation_en": "At night you must dip your headlights when following another vehicle or when an oncoming vehicle is approaching within 200 metres.",
+    "explanation_zh": "夜間跟車行駛，或對向車輛在200公尺以內接近時，必須切換為近光燈。"
+  },
+  {
+    "id": 12,
+    "category": "core",
+    "question_en": "For how long can a vehicle legally emit visible exhaust smoke?",
+    "question_zh": "車輛合法排放可見廢氣的時間上限為何？",
+    "options": [
+      { "en": "No more than 10 seconds", "zh": "不超過10秒" },
+      { "en": "No more than 30 seconds", "zh": "不超過30秒" },
+      { "en": "No more than 60 seconds", "zh": "不超過60秒" },
+      { "en": "As long as necessary when starting a cold engine", "zh": "冷車啟動時需要多長就多長" }
+    ],
+    "correct": 0,
+    "explanation_en": "A vehicle must not emit visible smoke for more than 10 seconds — this is a legal requirement to reduce air pollution.",
+    "explanation_zh": "車輛不得排放超過10秒的可見廢氣，這是減少空氣污染的法律規定。"
+  },
+  {
+    "id": 13,
+    "category": "core",
+    "question_en": "You are under 20 years old. What is the legal blood alcohol limit for you when driving?",
+    "question_zh": "如果你未滿20歲，駕車時合法的血液酒精濃度上限為何？",
+    "options": [
+      { "en": "50 mg per 100 ml of blood", "zh": "每100毫升血液中50毫克" },
+      { "en": "Zero — you must not have any alcohol in your blood", "zh": "零——血液中不得含有任何酒精" },
+      { "en": "30 mg per 100 ml of blood", "zh": "每100毫升血液中30毫克" },
+      { "en": "The same limit as drivers over 20", "zh": "與20歲以上駕駛相同的上限" }
+    ],
+    "correct": 1,
+    "explanation_en": "If you are under 20, the alcohol limit is zero. You must not drive with any alcohol in your blood at all.",
+    "explanation_zh": "未滿20歲的駕駛，酒精限制為零，血液中不得含有任何酒精。"
+  },
+  {
+    "id": 14,
+    "category": "core",
+    "question_en": "What happens to a police officer's directions compared with traffic signals and give-way rules?",
+    "question_zh": "警察指揮與交通號誌及禮讓規則相比，哪一個優先？",
+    "options": [
+      { "en": "Traffic signals always override a police officer", "zh": "交通號誌永遠優先於警察指揮" },
+      { "en": "A police officer's directions override traffic signals, signs and give-way rules", "zh": "警察指揮優先於交通號誌、標誌及禮讓規則" },
+      { "en": "Give-way rules override a police officer's directions", "zh": "禮讓規則優先於警察指揮" },
+      { "en": "Both have equal authority", "zh": "兩者具有相同效力" }
+    ],
+    "correct": 1,
+    "explanation_en": "A police officer's directions always override traffic signals, signs and give-way rules. You must obey them.",
+    "explanation_zh": "警察指揮永遠優先於交通號誌、標誌及禮讓規則，你必須服從。"
+  },
+  {
+    "id": 15,
+    "category": "core",
+    "question_en": "You are turning right at an intersection. Which vehicles must you give way to?",
+    "question_zh": "在路口右轉時，你必須禮讓哪些車輛？",
+    "options": [
+      { "en": "Oncoming vehicles going straight or turning left", "zh": "對向直行或左轉的車輛" },
+      { "en": "Only pedestrians crossing the road you are turning into", "zh": "僅需禮讓你要轉入道路上的行人" },
+      { "en": "All vehicles regardless of direction", "zh": "無論方向，所有車輛" },
+      { "en": "No vehicles — turning right has priority", "zh": "無需禮讓任何車輛——右轉享有優先權" }
+    ],
+    "correct": 0,
+    "explanation_en": "When turning right, you must give way to oncoming vehicles travelling straight ahead or turning left.",
+    "explanation_zh": "右轉時，你必須禮讓對向直行或左轉的車輛。"
+  },
+  {
+    "id": 16,
+    "category": "core",
+    "question_en": "When approaching a roundabout, who must you give way to?",
+    "question_zh": "進入圓環時，你必須禮讓誰？",
+    "options": [
+      { "en": "Traffic exiting the roundabout on your right", "zh": "從你右側離開圓環的車輛" },
+      { "en": "Traffic already on the roundabout or approaching from your right", "zh": "已在圓環內或從你右側進入的車輛" },
+      { "en": "Traffic entering the roundabout from the left", "zh": "從左側進入圓環的車輛" },
+      { "en": "No one — the first to arrive goes first", "zh": "無需禮讓任何人——先到先行" }
+    ],
+    "correct": 1,
+    "explanation_en": "At a roundabout you must give way to traffic already on the roundabout and to traffic approaching from your right.",
+    "explanation_zh": "進入圓環時，必須禮讓已在圓環內的車輛以及從你右側接近的車輛。"
+  },
+  {
+    "id": 17,
+    "category": "core",
+    "question_en": "When leaving a roundabout, what signal should you give?",
+    "question_zh": "離開圓環時，應打什麼方向燈？",
+    "options": [
+      { "en": "Right signal", "zh": "右方向燈" },
+      { "en": "Left signal", "zh": "左方向燈" },
+      { "en": "No signal is required", "zh": "不需要打燈" },
+      { "en": "Hazard lights", "zh": "危險警示燈" }
+    ],
+    "correct": 1,
+    "explanation_en": "You must always signal left as you exit a roundabout to let other drivers know you are leaving.",
+    "explanation_zh": "離開圓環時，必須打左方向燈，讓其他駕駛知道你即將駛出。"
+  },
+  {
+    "id": 18,
+    "category": "core",
+    "question_en": "You are entering a roundabout and intend to turn right. What signal should you give on approach?",
+    "question_zh": "準備進入圓環並右轉時，入口應打什麼方向燈？",
+    "options": [
+      { "en": "Left signal", "zh": "左方向燈" },
+      { "en": "Right signal", "zh": "右方向燈" },
+      { "en": "No signal — roundabouts do not require signals on entry", "zh": "不打燈——圓環入口不需要方向燈" },
+      { "en": "Hazard lights to warn others", "zh": "打危險警示燈提醒他人" }
+    ],
+    "correct": 1,
+    "explanation_en": "If you are turning right at a roundabout, signal right on approach. Signal left as you exit.",
+    "explanation_zh": "在圓環右轉時，入口應打右方向燈，離開時再打左方向燈。"
+  },
+  {
+    "id": 19,
+    "category": "core",
+    "question_en": "You are going straight ahead through a roundabout. What signal do you use on entry?",
+    "question_zh": "在圓環中直行穿越時，入口應打什麼方向燈？",
+    "options": [
+      { "en": "Right signal on entry", "zh": "入口打右方向燈" },
+      { "en": "Left signal on entry", "zh": "入口打左方向燈" },
+      { "en": "No signal on entry, but signal left to exit", "zh": "入口不打燈，但離開時打左方向燈" },
+      { "en": "No signal is needed at all", "zh": "全程不需要打任何燈" }
+    ],
+    "correct": 2,
+    "explanation_en": "When going straight through a roundabout, no signal is needed on entry. Signal left as you pass the exit before the one you want to take.",
+    "explanation_zh": "在圓環直行時，入口不需要打燈；離開前打左方向燈即可。"
+  },
+  {
+    "id": 20,
+    "category": "core",
+    "question_en": "Red lights are flashing at a railway level crossing. What must you do?",
+    "question_zh": "鐵路平交道亮起紅色閃燈時，你必須怎麼做？",
+    "options": [
+      { "en": "Slow to 20 km/h and proceed carefully", "zh": "減速至時速20公里後小心通過" },
+      { "en": "Stop and do not cross until the lights stop flashing", "zh": "停車，等閃燈停止後才能通過" },
+      { "en": "Stop only if you can see a train approaching", "zh": "僅在看見列車接近時才需停車" },
+      { "en": "Cross quickly if no train is visible", "zh": "若看不見列車就快速通過" }
+    ],
+    "correct": 1,
+    "explanation_en": "When red lights flash at a railway level crossing, you must stop and must not cross until the lights stop flashing and it is safe.",
+    "explanation_zh": "鐵路平交道亮起紅色閃燈時，必須停車，等閃燈停止後才能通過。"
+  },
+  {
+    "id": 21,
+    "category": "core",
+    "question_en": "What does a speed limit sign show?",
+    "question_zh": "速限號誌顯示的是什麼？",
+    "options": [
+      { "en": "The minimum speed you must travel at", "zh": "你必須行駛的最低速度" },
+      { "en": "The recommended speed in wet conditions", "zh": "在濕滑路況下建議的速度" },
+      { "en": "The speed at which most drivers travel", "zh": "大多數駕駛行駛的速度" },
+      { "en": "The maximum speed allowed under good conditions", "zh": "良好路況下允許的最高速度" }
+    ],
+    "correct": 3,
+    "explanation_en": "A speed limit sign shows the maximum speed allowed in good conditions. In bad conditions you must drive at a speed that is safe for those conditions.",
+    "explanation_zh": "速限號誌顯示良好路況下允許的最高速度。路況不佳時，你必須以適合當時狀況的安全速度行駛。"
+  },
+  {
+    "id": 22,
+    "category": "core",
+    "question_en": "Where should a learner-licence supervisor sit when accompanying a learner driver?",
+    "question_zh": "學習執照監督員在陪同學員駕駛時，應坐在哪裡？",
+    "options": [
+      { "en": "In the back seat directly behind the learner", "zh": "在學員正後方的後座" },
+      { "en": "Anywhere in the vehicle", "zh": "車內任何位置皆可" },
+      { "en": "In the back seat behind the passenger side", "zh": "在乘客側後方的後座" },
+      { "en": "In the front passenger seat", "zh": "在前排乘客座位" }
+    ],
+    "correct": 3,
+    "explanation_en": "A learner-licence supervisor must sit in the front passenger seat so they can see clearly and give timely guidance.",
+    "explanation_zh": "學習執照監督員必須坐在前排乘客座位，以便清楚觀察並及時給予指導。"
+  },
+  {
+    "id": 23,
+    "category": "core",
+    "question_en": "Who is responsible for ensuring a child under 15 years old is wearing a seatbelt or approved restraint?",
+    "question_zh": "誰負責確保15歲以下兒童繫好安全帶或使用核准的兒童安全座椅？",
+    "options": [
+      { "en": "The child's parent or guardian", "zh": "兒童的父母或監護人" },
+      { "en": "The child themselves if old enough", "zh": "若年齡足夠，由兒童本人負責" },
+      { "en": "The driver", "zh": "駕駛人" },
+      { "en": "The front-seat passenger", "zh": "前座乘客" }
+    ],
+    "correct": 2,
+    "explanation_en": "The driver is responsible for ensuring all passengers under 15 are properly restrained.",
+    "explanation_zh": "駕駛人負責確保所有15歲以下乘客都已正確繫好安全裝置。"
+  },
+  {
+    "id": 24,
+    "category": "core",
+    "question_en": "A passenger aged 15 or over is travelling in your car without wearing a seatbelt. Who is legally responsible?",
+    "question_zh": "一名15歲或以上的乘客在你的車上沒有繫安全帶，誰在法律上需要負責？",
+    "options": [
+      { "en": "The driver", "zh": "駕駛人" },
+      { "en": "The passenger themselves", "zh": "乘客本人" },
+      { "en": "The vehicle owner", "zh": "車輛所有人" },
+      { "en": "Both the driver and passenger equally", "zh": "駕駛人與乘客共同承擔" }
+    ],
+    "correct": 1,
+    "explanation_en": "Passengers aged 15 or over are each responsible for their own seatbelt.",
+    "explanation_zh": "15歲或以上的乘客，各自對自己是否繫安全帶負責。"
+  },
+  {
+    "id": 25,
+    "category": "core",
+    "question_en": "At a pedestrian crossing without a raised island in the middle, when must you give way to a pedestrian?",
+    "question_zh": "在沒有中央安全島的行人穿越道，何時必須禮讓行人？",
+    "options": [
+      { "en": "Only when the pedestrian is directly in front of your vehicle", "zh": "僅在行人直接站在你車輛前方時" },
+      { "en": "Give way to pedestrians on the crossing or stepping onto it from either side", "zh": "禮讓已在穿越道上或從任一側踏上的行人" },
+      { "en": "Only when the crossing has a green pedestrian signal showing", "zh": "僅在穿越道顯示綠色行人號誌時" },
+      { "en": "Give way only on the half of the crossing in front of you", "zh": "僅需禮讓你前方半段穿越道上的行人" }
+    ],
+    "correct": 1,
+    "explanation_en": "At a pedestrian crossing without a raised island, treat it as a single crossing and give way to pedestrians on or about to step onto it from either side.",
+    "explanation_zh": "在沒有中央安全島的行人穿越道，將整條穿越道視為一體，必須禮讓已在或即將從任一側踏上的行人。"
+  },
+  {
+    "id": 26,
+    "category": "core",
+    "question_en": "At a pedestrian crossing that has a raised island in the middle, how do you treat each half?",
+    "question_zh": "在有中央安全島的行人穿越道，每半段應如何處理？",
+    "options": [
+      { "en": "Give way to pedestrians anywhere on the entire crossing", "zh": "禮讓整條穿越道任何位置的行人" },
+      { "en": "Treat each half as a separate crossing — give way to pedestrians on your half", "zh": "將每半段視為獨立穿越道，禮讓你這一側的行人" },
+      { "en": "You do not need to give way as pedestrians are protected by the island", "zh": "不需要禮讓，因為行人受安全島保護" },
+      { "en": "Give way only when lights are showing", "zh": "僅在有號誌燈顯示時才需禮讓" }
+    ],
+    "correct": 1,
+    "explanation_en": "When a raised island divides the crossing, treat each half as a separate crossing. Give way to pedestrians on your half.",
+    "explanation_zh": "有中央安全島時，將每半段視為獨立的穿越道，須禮讓你這一側的行人。"
+  },
+  {
+    "id": 27,
+    "category": "core",
+    "question_en": "Before reversing your vehicle, what should you do?",
+    "question_zh": "倒車之前，你應該怎麼做？",
+    "options": [
+      { "en": "Sound your horn and then reverse slowly", "zh": "按喇叭後慢慢倒車" },
+      { "en": "Check for hazards by looking around, including behind, using mirrors and looking directly", "zh": "使用後視鏡並直接回頭確認，檢查周圍包括後方是否有危險" },
+      { "en": "Ask a passenger to watch for you", "zh": "請乘客幫你觀察" },
+      { "en": "Simply check your rear-view mirror", "zh": "只需查看後視鏡" }
+    ],
+    "correct": 1,
+    "explanation_en": "Before reversing, check for hazards by looking around and directly behind you, and using your mirrors. Mirrors alone are not enough.",
+    "explanation_zh": "倒車前，應使用後視鏡並直接回頭查看，確認周圍及後方是否有危險，僅靠後視鏡是不夠的。"
+  },
+  {
+    "id": 28,
+    "category": "core",
+    "question_en": "A ball bounces onto the road from between parked cars. What should you do?",
+    "question_zh": "一顆球從停放車輛之間彈到路上，你應該怎麼做？",
+    "options": [
+      { "en": "Sound your horn and maintain your speed", "zh": "按喇叭並維持車速" },
+      { "en": "Swerve into the other lane to avoid the ball", "zh": "轉向另一車道以避開球" },
+      { "en": "Slow down and be ready to stop — a child may follow onto the road", "zh": "減速並準備停車——可能有兒童跟著衝出來" },
+      { "en": "Flash your headlights as a warning", "zh": "閃頭燈示警" }
+    ],
+    "correct": 2,
+    "explanation_en": "When a ball bounces onto the road, slow down and be ready to stop because a child may follow it out between the parked cars.",
+    "explanation_zh": "當球彈到路上時，應減速並準備停車，因為可能有兒童跟著從停靠車輛之間衝出來。"
+  },
+  {
+    "id": 29,
+    "category": "signs",
+    "question_en": "What does this sign mean?",
+    "question_zh": "這個號誌代表什麼意思？",
+    "sign": "stop",
+    "options": [
+      { "en": "Slow down and check for traffic before proceeding", "zh": "減速並確認無來車後通行" },
+      { "en": "Come to a complete stop and give way to all traffic before proceeding", "zh": "完全停車，並禮讓所有來車後再通行" },
+      { "en": "Stop only if another vehicle is approaching", "zh": "僅在有車輛接近時才需停車" },
+      { "en": "Give way to traffic from the right only", "zh": "僅禮讓右方來車" }
+    ],
+    "correct": 1,
+    "explanation_en": "A stop sign requires a complete stop at the line. You must then give way to all traffic before you proceed.",
+    "explanation_zh": "停車號誌要求你在停止線前完全停車，然後禮讓所有來車後才能繼續行駛。"
+  },
+  {
+    "id": 30,
+    "category": "signs",
+    "question_en": "What does this sign mean?",
+    "question_zh": "這個號誌代表什麼意思？",
+    "sign": "give-way",
+    "options": [
+      { "en": "Come to a complete stop before proceeding", "zh": "完全停車後再繼續行駛" },
+      { "en": "Give way only to vehicles on your right", "zh": "僅禮讓右側來車" },
+      { "en": "Flash your headlights and proceed", "zh": "閃頭燈後繼續行駛" },
+      { "en": "Slow or stop if necessary and give way to all traffic before proceeding", "zh": "如有必要須減速或停車，禮讓所有來車後再通行" }
+    ],
+    "correct": 3,
+    "explanation_en": "A give-way sign means you must slow or stop if necessary and give way to all traffic before proceeding.",
+    "explanation_zh": "禮讓號誌表示你必須在必要時減速或停車，並禮讓所有來車後再通行。"
+  },
+  {
+    "id": 31,
+    "category": "signs",
+    "question_en": "What does this sign mean?",
+    "question_zh": "這個號誌代表什麼意思？",
+    "sign": "speed-50",
+    "options": [
+      { "en": "The recommended speed is 50 km/h", "zh": "建議速度為時速50公里" },
+      { "en": "The minimum speed is 50 km/h", "zh": "最低速度為時速50公里" },
+      { "en": "The maximum speed is 50 km/h", "zh": "最高速度為時速50公里" },
+      { "en": "Speed up to 50 km/h before the intersection", "zh": "在路口前加速至時速50公里" }
+    ],
+    "correct": 2,
+    "explanation_en": "This is a speed limit sign. The maximum speed allowed is 50 km/h — you must not exceed it.",
+    "explanation_zh": "這是速限號誌，最高速度為時速50公里，不得超越。"
+  },
+  {
+    "id": 32,
+    "category": "signs",
+    "question_en": "What does this sign mean?",
+    "question_zh": "這個號誌代表什麼意思？",
+    "sign": "speed-100",
+    "options": [
+      { "en": "The minimum speed you must travel is 100 km/h", "zh": "你必須行駛的最低速度為時速100公里" },
+      { "en": "The maximum speed allowed is 100 km/h", "zh": "最高速度為時速100公里" },
+      { "en": "You must travel at exactly 100 km/h", "zh": "你必須以時速100公里行駛" },
+      { "en": "The road is a motorway with no speed limit", "zh": "此路是快速道路，沒有速限" }
+    ],
+    "correct": 1,
+    "explanation_en": "This is the 100 km/h speed limit sign showing the maximum speed. It is not a minimum — you may drive slower if conditions require it.",
+    "explanation_zh": "這是時速100公里速限號誌，顯示的是最高速度，而非最低速度。如果路況需要，你可以行駛更慢。"
+  },
+  {
+    "id": 33,
+    "category": "signs",
+    "question_en": "What does this sign mean?",
+    "question_zh": "這個號誌代表什麼意思？",
+    "sign": "derestriction",
+    "options": [
+      { "en": "There is no speed limit at all on this road", "zh": "此路完全沒有速限" },
+      { "en": "The previous speed limit has ended; the open-road limit (100 km/h) now applies", "zh": "前一個速限已結束，現在適用開放道路速限（時速100公里）" },
+      { "en": "Reduce your speed to 60 km/h", "zh": "減速至時速60公里" },
+      { "en": "You are entering a 50 km/h urban area", "zh": "你正進入時速50公里的市區" }
+    ],
+    "correct": 1,
+    "explanation_en": "The derestriction sign (white circle with a diagonal bar) means the previous speed restriction has ended. The open-road limit (normally 100 km/h) now applies.",
+    "explanation_zh": "解除速限號誌（白色圓圈加斜槓）表示前一個速限已結束，現在適用開放道路速限（通常為時速100公里）。"
+  },
+  {
+    "id": 34,
+    "category": "signs",
+    "question_en": "What does this sign mean?",
+    "question_zh": "這個號誌代表什麼意思？",
+    "sign": "no-entry",
+    "options": [
+      { "en": "Vehicles may enter but must give way to oncoming traffic", "zh": "車輛可以進入，但必須禮讓對向來車" },
+      { "en": "No vehicles may enter this road", "zh": "禁止任何車輛進入此道路" },
+      { "en": "Only cyclists are prohibited", "zh": "僅自行車禁止進入" },
+      { "en": "Entry is permitted between 6 am and 6 pm only", "zh": "僅限早上6點至下午6點可以進入" }
+    ],
+    "correct": 1,
+    "explanation_en": "A no-entry sign (red circle, white horizontal bar) means no vehicles may enter. You must not drive past this sign.",
+    "explanation_zh": "禁止進入號誌（紅色圓圈加白色橫條）表示禁止任何車輛進入，不得駛入。"
+  },
+  {
+    "id": 35,
+    "category": "signs",
+    "question_en": "What does this sign mean?",
+    "question_zh": "這個號誌代表什麼意思？",
+    "sign": "no-left-turn",
+    "options": [
+      { "en": "You may only turn left when the road is clear", "zh": "僅在道路淨空時才能左轉" },
+      { "en": "You must not turn left here", "zh": "此處禁止左轉" },
+      { "en": "A left turn is available further ahead", "zh": "前方有左轉機會" },
+      { "en": "Pedestrians may not cross on the left", "zh": "行人不得從左側穿越" }
+    ],
+    "correct": 1,
+    "explanation_en": "The no-left-turn sign means you must not turn left at this location.",
+    "explanation_zh": "禁止左轉號誌表示此處不得左轉。"
+  },
+  {
+    "id": 36,
+    "category": "signs",
+    "question_en": "What does this sign mean?",
+    "question_zh": "這個號誌代表什麼意思？",
+    "sign": "railway-crossing",
+    "options": [
+      { "en": "A railway level crossing is ahead — look for trains and be ready to stop", "zh": "前方有鐵路平交道——注意列車並準備停車" },
+      { "en": "A road maintenance vehicle crossing ahead", "zh": "前方有道路養護車輛穿越" },
+      { "en": "Turn right ahead to avoid the railway line", "zh": "前方右轉以避開鐵路" },
+      { "en": "The railway line runs parallel to this road", "zh": "鐵路線與此路平行" }
+    ],
+    "correct": 0,
+    "explanation_en": "This sign (railway crossbuck) warns of a level crossing ahead. Look and listen for trains, be ready to stop, and give way to any train.",
+    "explanation_zh": "此號誌（鐵路十字標誌）警示前方有平交道。注意觀察及聆聽列車，準備停車，並禮讓所有列車。"
+  },
+  {
+    "id": 37,
+    "category": "signs",
+    "question_en": "What does this sign mean?",
+    "question_zh": "這個號誌代表什麼意思？",
+    "sign": "roundabout",
+    "options": [
+      { "en": "A roundabout ahead — give way to traffic from your right", "zh": "前方有圓環——禮讓右側來車" },
+      { "en": "A roundabout ahead — you have priority over all traffic", "zh": "前方有圓環——你對所有來車享有優先路權" },
+      { "en": "A roundabout ahead — give way to traffic from your left", "zh": "前方有圓環——禮讓左側來車" },
+      { "en": "A circular one-way road is ahead", "zh": "前方是環狀單行道" }
+    ],
+    "correct": 0,
+    "explanation_en": "The roundabout sign warns of a roundabout ahead. At the roundabout, give way to all traffic that will cross your path coming from your right.",
+    "explanation_zh": "圓環號誌警示前方有圓環。進入圓環時，應禮讓所有從你右側進入且路線與你交叉的車輛。"
+  },
+  {
+    "id": 38,
+    "category": "signs",
+    "question_en": "What does this sign mean?",
+    "question_zh": "這個號誌代表什麼意思？",
+    "sign": "crossroads",
+    "options": [
+      { "en": "A crossroads / intersection is ahead — be prepared", "zh": "前方有十字路口——請做好準備" },
+      { "en": "The road ends — turn left or right", "zh": "道路到此為止，請左轉或右轉" },
+      { "en": "A give-way sign is posted at the next intersection", "zh": "下一個路口設有禮讓號誌" },
+      { "en": "A school crossing is ahead", "zh": "前方有學校穿越道" }
+    ],
+    "correct": 0,
+    "explanation_en": "This warning sign (yellow diamond, cross shape) indicates a crossroads or intersection ahead. Be alert and prepared to give way.",
+    "explanation_zh": "此警告號誌（黃色菱形，十字圖案）表示前方有十字路口。保持警覺，準備禮讓。"
+  },
+  {
+    "id": 39,
+    "category": "signs",
+    "question_en": "What does this sign mean?",
+    "question_zh": "這個號誌代表什麼意思？",
+    "sign": "pedestrian-crossing",
+    "options": [
+      { "en": "A school zone ahead — slow to 40 km/h", "zh": "前方學區——減速至時速40公里" },
+      { "en": "A pedestrian crossing ahead — give way to pedestrians on the crossing", "zh": "前方有行人穿越道——禮讓穿越道上的行人" },
+      { "en": "Pedestrians must wait for the signal before crossing", "zh": "行人必須等候號誌才能穿越" },
+      { "en": "This road is for pedestrians only", "zh": "此路僅供行人使用" }
+    ],
+    "correct": 1,
+    "explanation_en": "This sign (blue square with a walking figure) marks a pedestrian crossing. You must give way to any pedestrians on the crossing.",
+    "explanation_zh": "此號誌（藍色方形，行走人形圖案）標示行人穿越道。你必須禮讓穿越道上的行人。"
+  },
+  {
+    "id": 40,
+    "category": "signs",
+    "question_en": "What does this sign mean?",
+    "question_zh": "這個號誌代表什麼意思？",
+    "sign": "accident",
+    "options": [
+      { "en": "Slow to 50 km/h until past the crash site", "zh": "減速至時速50公里直到通過事故現場" },
+      { "en": "Stop and wait for police to direct you", "zh": "停車等候警察指揮" },
+      { "en": "Slow to 20 km/h until past the crash site", "zh": "減速至時速20公里直到通過事故現場" },
+      { "en": "Use the alternative route shown on the sign", "zh": "按號誌指示走替代路線" }
+    ],
+    "correct": 2,
+    "explanation_en": "An orange ACCIDENT sign means there is a crash ahead. You must reduce your speed to 20 km/h and maintain it until you have passed the crash site.",
+    "explanation_zh": "橙色「ACCIDENT（事故）」號誌表示前方發生車禍，必須減速至時速20公里，並維持到通過事故現場為止。"
+  },
+  {
+    "id": 41,
+    "category": "signs",
+    "question_en": "What does this sign mean?",
+    "question_zh": "這個號誌代表什麼意思？",
+    "sign": "road-works",
+    "options": [
+      { "en": "Road works ahead — slow down and watch for workers", "zh": "前方有工程施工——減速並注意工人" },
+      { "en": "Road is closed — use the detour", "zh": "道路封閉——請走迂迴路線" },
+      { "en": "Increase your speed to pass the works quickly", "zh": "加速快速通過施工區域" },
+      { "en": "Trucks may be entering the road", "zh": "卡車可能正在駛入道路" }
+    ],
+    "correct": 0,
+    "explanation_en": "A road works sign (orange diamond) warns of road works ahead. Slow down and be prepared for workers, machinery, and changed conditions.",
+    "explanation_zh": "施工警告號誌（橙色菱形）警示前方有道路施工。減速並注意工人、機械及改變的路況。"
+  },
+  {
+    "id": 42,
+    "category": "signs",
+    "question_en": "What does this sign mean?",
+    "question_zh": "這個號誌代表什麼意思？",
+    "sign": "one-lane-bridge-give-way",
+    "options": [
+      { "en": "You have priority — oncoming traffic must wait for you", "zh": "你享有優先路權——對向車輛必須等你通過" },
+      { "en": "Give way to oncoming traffic before crossing the one-lane bridge", "zh": "在通過單車道橋樑前禮讓對向車輛" },
+      { "en": "Stop and sound your horn before crossing", "zh": "停車按喇叭後再過橋" },
+      { "en": "Bridge is weight-restricted — light vehicles only", "zh": "橋樑有載重限制——僅限輕型車輛" }
+    ],
+    "correct": 1,
+    "explanation_en": "This sign means oncoming traffic has priority at the one-lane bridge. You must give way to vehicles coming from the other side.",
+    "explanation_zh": "此號誌表示對向車輛在單車道橋樑享有優先路權，你必須禮讓對向車輛先通過。"
+  },
+  {
+    "id": 43,
+    "category": "signs",
+    "question_en": "What does this sign mean?",
+    "question_zh": "這個號誌代表什麼意思？",
+    "sign": "one-lane-bridge-priority",
+    "options": [
+      { "en": "Give way to oncoming vehicles at the one-lane bridge", "zh": "在單車道橋樑禮讓對向車輛" },
+      { "en": "You have priority over oncoming vehicles at the one-lane bridge", "zh": "你在單車道橋樑對對向車輛享有優先路權" },
+      { "en": "The bridge is closed", "zh": "橋樑封閉" },
+      { "en": "Slow to 10 km/h when crossing the bridge", "zh": "過橋時減速至時速10公里" }
+    ],
+    "correct": 1,
+    "explanation_en": "This sign means you have priority over oncoming vehicles at the one-lane bridge. However, you should still take care — make sure the bridge is clear before proceeding.",
+    "explanation_zh": "此號誌表示你在單車道橋樑對對向車輛享有優先路權。但仍應謹慎，確認橋上淨空後再通過。"
+  },
+  {
+    "id": 44,
+    "category": "signs",
+    "question_en": "There is a solid yellow line painted on your side of the centre line. What does this mean?",
+    "question_zh": "中心線你這一側畫有實線黃色標線，這代表什麼意思？",
+    "options": [
+      { "en": "You must not park alongside it", "zh": "不得在其旁邊停車" },
+      { "en": "You must not cross it to pass another vehicle", "zh": "不得跨越此線超車" },
+      { "en": "You are entering a school zone", "zh": "你正進入學校區域" },
+      { "en": "You must reduce your speed to 50 km/h", "zh": "你必須減速至時速50公里" }
+    ],
+    "correct": 1,
+    "explanation_en": "A solid yellow line on your side of the centre line means you must not cross it to overtake or pass another vehicle.",
+    "explanation_zh": "中心線你這一側有實線黃色標線，表示不得跨越此線超車。"
+  },
+  {
+    "id": 45,
+    "category": "signs",
+    "question_en": "What does a broken yellow line painted close to the edge of the road mean?",
+    "question_zh": "靠近路緣畫有虛線黃色標線，代表什麼意思？",
+    "options": [
+      { "en": "Parking is allowed here at any time", "zh": "任何時間皆可在此停車" },
+      { "en": "You may not stop or park in that area at those times", "zh": "在規定時間內不得在該區域停車或暫停" },
+      { "en": "Loading zone — commercial vehicles only", "zh": "裝卸區——僅限商業車輛" },
+      { "en": "Cycle lane boundary — do not cross", "zh": "自行車道邊界——請勿跨越" }
+    ],
+    "correct": 1,
+    "explanation_en": "A broken yellow line near the road edge means no stopping or parking in that area (at the times indicated, or at all times if no times shown).",
+    "explanation_zh": "靠近路緣的虛線黃色標線表示在指定時間（或若無時間說明則任何時間）不得在該區域停車或暫停。"
+  },
+  {
+    "id": 46,
+    "category": "signs",
+    "question_en": "What is the flush median (a painted central island) intended to be used for?",
+    "question_zh": "道路中央的導引島（路面彩繪島區）的正確用途是什麼？",
+    "options": [
+      { "en": "Overtaking slower vehicles", "zh": "超越較慢的車輛" },
+      { "en": "Travelling along at a reduced speed", "zh": "以較低速度沿著行駛" },
+      { "en": "Emergency stopping only", "zh": "僅供緊急停車使用" },
+      { "en": "Waiting while turning right or as a turning area", "zh": "右轉等待或轉向使用" }
+    ],
+    "correct": 3,
+    "explanation_en": "A flush median is intended for use as a waiting area when turning right or as a turning area — not for travelling along or overtaking.",
+    "explanation_zh": "導引島供右轉等待或轉向使用，不得用於行車或超車。"
+  },
+  {
+    "id": 47,
+    "category": "signs",
+    "question_en": "A lane is marked with the sign 'T2'. What does this mean?",
+    "question_zh": "車道標示有「T2」號誌，這代表什麼？",
+    "options": [
+      { "en": "Only taxis and trucks may use this lane", "zh": "僅計程車與卡車可使用此車道" },
+      { "en": "Only vehicles with at least 2 people (driver plus one passenger) may use this lane", "zh": "僅限至少有2人（駕駛加至少一名乘客）的車輛使用此車道" },
+      { "en": "The speed limit in this lane is 20 km/h", "zh": "此車道速限為時速20公里" },
+      { "en": "This lane is only open from 7 am to 9 am", "zh": "此車道僅在早上7點至9點開放" }
+    ],
+    "correct": 1,
+    "explanation_en": "A T2 transit lane may only be used by vehicles carrying at least 2 people: the driver and at least one passenger.",
+    "explanation_zh": "T2共乘車道僅供至少攜帶2人（駕駛加至少一名乘客）的車輛使用。"
+  },
+  {
+    "id": 48,
+    "category": "signs",
+    "question_en": "A traffic signal is showing a yellow (amber) flashing light. What should you do?",
+    "question_zh": "交通號誌顯示黃色（琥珀色）閃爍燈光，你應該怎麼做？",
+    "options": [
+      { "en": "Treat it as a green light and proceed normally", "zh": "視為綠燈正常通過" },
+      { "en": "Treat it as a red light and stop completely", "zh": "視為紅燈完全停車" },
+      { "en": "Proceed with care and give way as required", "zh": "小心通行並依規定禮讓" },
+      { "en": "Only trucks and buses need to stop", "zh": "只有卡車和公車需要停車" }
+    ],
+    "correct": 2,
+    "explanation_en": "One or more yellow flashing signals means the signals are not operating normally. Treat it as give way — proceed with care and give way as required.",
+    "explanation_zh": "一個或多個黃色閃爍號誌表示號誌系統工作異常，應視為禮讓號誌，小心通行並依規定禮讓。"
+  },
+  {
+    "id": 49,
+    "category": "signs",
+    "question_en": "What does a white diamond shape painted on the road surface tell you?",
+    "question_zh": "路面上有白色菱形標線，這代表什麼？",
+    "options": [
+      { "en": "A pedestrian crossing is ahead", "zh": "前方有行人穿越道" },
+      { "en": "You are entering a school zone", "zh": "你正進入學校區域" },
+      { "en": "You are approaching a cycle lane crossing", "zh": "你正接近自行車道交叉口" },
+      { "en": "The road ahead is closed", "zh": "前方道路封閉" }
+    ],
+    "correct": 0,
+    "explanation_en": "A white diamond painted on the road is an advance warning that a pedestrian crossing is ahead.",
+    "explanation_zh": "路面上的白色菱形標線是提前警示，表示前方有行人穿越道。"
+  },
+  {
+    "id": 50,
+    "category": "signs",
+    "question_en": "What does a red traffic light mean?",
+    "question_zh": "紅色交通號誌燈代表什麼？",
+    "options": [
+      { "en": "Stop, but you may proceed if no other vehicles are coming", "zh": "停車，但若沒有其他車輛就可以通行" },
+      { "en": "Stop completely behind the stop line and wait until green", "zh": "在停止線後完全停車，等候綠燈" },
+      { "en": "Slow to 20 km/h and proceed with caution", "zh": "減速至時速20公里並謹慎通行" },
+      { "en": "You may turn left on red if the road is clear", "zh": "若道路淨空，紅燈時可左轉" }
+    ],
+    "correct": 1,
+    "explanation_en": "A red traffic light means stop completely behind the stop line and wait until the signal turns green before proceeding.",
+    "explanation_zh": "紅色交通號誌燈表示必須在停止線後完全停車，等候號誌變為綠燈後才能繼續行駛。"
+  },
+  {
+    "id": 51,
+    "category": "parking",
+    "question_en": "How close to a vehicle entrance (driveway) may you park?",
+    "question_zh": "你最近可以停車距車道入口（私家車道）多近的地方？",
+    "options": [
+      { "en": "Not within 3 metres", "zh": "距離不得少於3公尺" },
+      { "en": "Not within 6 metres", "zh": "距離不得少於6公尺" },
+      { "en": "There is no restriction unless signed", "zh": "除非有號誌規定，否則沒有限制" },
+      { "en": "Not within 1 metre", "zh": "距離不得少於1公尺" }
+    ],
+    "correct": 3,
+    "explanation_en": "You must not park within 1 metre of a vehicle entrance or driveway.",
+    "explanation_zh": "不得在車道入口（私家車道）1公尺範圍內停車。"
+  },
+  {
+    "id": 52,
+    "category": "parking",
+    "question_en": "How close to a pedestrian crossing (on the approach side) may you park where there are no yellow lines?",
+    "question_zh": "在沒有黃色標線的情況下，在行人穿越道（接近側）最近可以停車在多近的地方？",
+    "options": [
+      { "en": "Not within 1 metre", "zh": "距離不得少於1公尺" },
+      { "en": "Not within 3 metres", "zh": "距離不得少於3公尺" },
+      { "en": "Not within 6 metres", "zh": "距離不得少於6公尺" },
+      { "en": "Not within 10 metres", "zh": "距離不得少於10公尺" }
+    ],
+    "correct": 2,
+    "explanation_en": "You must not park within 6 metres of a pedestrian crossing on the approach side when there are no yellow lines.",
+    "explanation_zh": "在沒有黃色標線的情況下，不得在行人穿越道接近側6公尺範圍內停車。"
+  },
+  {
+    "id": 53,
+    "category": "parking",
+    "question_en": "How close to an intersection may you park where there are no yellow lines?",
+    "question_zh": "在沒有黃色標線的情況下，最近可以停車在路口多近的地方？",
+    "options": [
+      { "en": "Not within 3 metres", "zh": "距離不得少於3公尺" },
+      { "en": "Not within 6 metres", "zh": "距離不得少於6公尺" },
+      { "en": "Not within 10 metres", "zh": "距離不得少於10公尺" },
+      { "en": "Not within 15 metres", "zh": "距離不得少於15公尺" }
+    ],
+    "correct": 1,
+    "explanation_en": "You must not park within 6 metres of an intersection where there are no yellow lines.",
+    "explanation_zh": "在沒有黃色標線的情況下，不得在路口6公尺範圍內停車。"
+  },
+  {
+    "id": 54,
+    "category": "parking",
+    "question_en": "Is it legal to park over a fire hydrant if someone stays in the car?",
+    "question_zh": "若有人留在車內，停車壓在消防栓上是否合法？",
+    "options": [
+      { "en": "Yes, as long as someone is in the car to move it if needed", "zh": "是的，只要有人留在車內以便需要時移車即可" },
+      { "en": "Yes, but only for up to 5 minutes", "zh": "是的，但最多只能5分鐘" },
+      { "en": "No, you must not park over a fire hydrant", "zh": "不，不得停車壓在消防栓上" },
+      { "en": "Yes, but only outside business hours", "zh": "是的，但僅限非上班時間" }
+    ],
+    "correct": 2,
+    "explanation_en": "You must not park over a fire hydrant under any circumstances — even if someone stays in the vehicle.",
+    "explanation_zh": "在任何情況下都不得停車壓在消防栓上，即使有人留在車內也不行。"
+  },
+  {
+    "id": 55,
+    "category": "parking",
+    "question_en": "A parking space has a sign marked 'P40'. What does this mean?",
+    "question_zh": "停車位上有「P40」號誌，這代表什麼？",
+    "options": [
+      { "en": "The parking space is 40 metres long", "zh": "此停車位長40公尺" },
+      { "en": "You may park here for a maximum of 40 minutes", "zh": "你最多可以在此停車40分鐘" },
+      { "en": "Parking costs 40 cents per hour", "zh": "停車費為每小時40分錢" },
+      { "en": "Only vehicles under 4,000 kg may park here", "zh": "僅限4,000公斤以下車輛停放" }
+    ],
+    "correct": 1,
+    "explanation_en": "A 'P40' sign means you may park there for a maximum of 40 minutes.",
+    "explanation_zh": "「P40」號誌表示你最多可以在此停車40分鐘。"
+  },
+  {
+    "id": 56,
+    "category": "parking",
+    "question_en": "A parking space displays a wheelchair symbol. Who may park there?",
+    "question_zh": "停車位顯示輪椅符號，誰可以在此停車？",
+    "options": [
+      { "en": "Any driver dropping off a disabled person", "zh": "任何接送身心障礙人士的駕駛" },
+      { "en": "Any driver if no other spaces are available", "zh": "在沒有其他停車位的情況下，任何駕駛都可以" },
+      { "en": "Government and police vehicles only", "zh": "僅限政府和警察車輛" },
+      { "en": "Only vehicles displaying a valid mobility permit", "zh": "僅限張貼有效行動不便停車許可證的車輛" }
+    ],
+    "correct": 3,
+    "explanation_en": "A mobility parking space (wheelchair symbol) is reserved for vehicles displaying a valid mobility permit only.",
+    "explanation_zh": "行動不便停車位（輪椅符號）僅供張貼有效行動不便停車許可證的車輛使用。"
+  },
+  {
+    "id": 57,
+    "category": "parking",
+    "question_en": "You want to park facing downhill on a road next to a kerb. Which way should you turn your front wheels?",
+    "question_zh": "你想在有路緣的下坡路旁停車，前輪應轉向哪個方向？",
+    "options": [
+      { "en": "Turn wheels away from the kerb (to the left)", "zh": "前輪遠離路緣（向左）" },
+      { "en": "Turn wheels toward the kerb (to the right)", "zh": "前輪朝向路緣（向右）" },
+      { "en": "Keep wheels straight against the kerb", "zh": "車輪保持直行緊靠路緣" },
+      { "en": "Direction does not matter as long as the handbrake is on", "zh": "只要拉上手煞車，方向不重要" }
+    ],
+    "correct": 1,
+    "explanation_en": "When parking facing downhill next to a kerb, turn your front wheels toward the kerb (right). If the vehicle rolls, the kerb will prevent it from moving into traffic.",
+    "explanation_zh": "面朝下坡靠路緣停車時，前輪應朝向路緣（向右）。若車輛滑動，路緣會阻止車輛衝入車道。"
+  },
+  {
+    "id": 58,
+    "category": "parking",
+    "question_en": "You must not stop in a bus stop. Which of the following is true?",
+    "question_zh": "你不得停靠公車站牌，以下哪項敘述正確？",
+    "options": [
+      { "en": "You may stop briefly to drop off a passenger", "zh": "你可以短暫停車讓乘客下車" },
+      { "en": "Private vehicles must not stop in a bus stop at all", "zh": "私家車完全不得停靠公車站牌" },
+      { "en": "You may stop if the bus is not coming", "zh": "若公車沒有來，你可以停靠" },
+      { "en": "You may park there after 6 pm", "zh": "晚上6點後你可以停靠" }
+    ],
+    "correct": 1,
+    "explanation_en": "A private vehicle must not stop in a bus stop — not even to drop someone off. Bus stops are reserved for buses.",
+    "explanation_zh": "私家車不得停靠公車站牌，即使只是讓人下車也不行。公車站牌僅供公車使用。"
+  },
+  {
+    "id": 59,
+    "category": "parking",
+    "question_en": "On which side of the road may you not park in a two-way street?",
+    "question_zh": "在雙向道路上，不得在哪一側停車？",
+    "options": [
+      { "en": "The left side", "zh": "左側" },
+      { "en": "The right-hand side", "zh": "右側" },
+      { "en": "Either side — you must always use a car park", "zh": "兩側都不行——你必須一律使用停車場" },
+      { "en": "There is no restriction on which side you park", "zh": "停哪一側沒有任何限制" }
+    ],
+    "correct": 1,
+    "explanation_en": "You must not park on the right-hand side of the road in a two-way street. You may park on the right only in a one-way street.",
+    "explanation_zh": "在雙向道路上，不得靠右側停車。只有在單行道上才可以靠右停車。"
+  },
+  {
+    "id": 60,
+    "category": "parking",
+    "question_en": "Is it legal to park on a footpath?",
+    "question_zh": "在人行道上停車是否合法？",
+    "options": [
+      { "en": "Yes, if the vehicle does not block the entire footpath", "zh": "是的，若車輛沒有完全堵住人行道" },
+      { "en": "Yes, but only for up to 10 minutes", "zh": "是的，但最多只能10分鐘" },
+      { "en": "Yes, but only motorcycles and bicycles", "zh": "是的，但僅限機車和自行車" },
+      { "en": "No, you must not park on a footpath", "zh": "不，不得在人行道上停車" }
+    ],
+    "correct": 3,
+    "explanation_en": "You must not park on a footpath — this obstructs pedestrians, including people with prams or wheelchairs.",
+    "explanation_zh": "不得在人行道上停車，這會妨礙行人，包括推嬰兒車或乘坐輪椅的人。"
+  },
+  {
+    "id": 61,
+    "category": "emergency",
+    "question_en": "What is the very first thing you should do if you are involved in a crash?",
+    "question_zh": "若你涉及車禍，第一件事應該做什麼？",
+    "options": [
+      { "en": "Take photos for insurance purposes", "zh": "為保險目的拍照存證" },
+      { "en": "Call your insurance company immediately", "zh": "立即聯繫你的保險公司" },
+      { "en": "Move all vehicles to the side of the road", "zh": "將所有車輛移至路邊" },
+      { "en": "Stop and check that everyone is safe and check for injuries", "zh": "停車並確認每個人安全，檢查是否有人受傷" }
+    ],
+    "correct": 3,
+    "explanation_en": "The first action after a crash is to stop and check that everyone involved is safe and to check for injuries.",
+    "explanation_zh": "車禍後第一件事是停車，確認所有相關人員安全並檢查是否有受傷。"
+  },
+  {
+    "id": 62,
+    "category": "emergency",
+    "question_en": "When should you use your hazard lights?",
+    "question_zh": "什麼時候應該開啟危險警示燈？",
+    "options": [
+      { "en": "Whenever you are driving in heavy rain", "zh": "在大雨中行駛時" },
+      { "en": "When your vehicle is broken down or causing a hazard to other road users", "zh": "當你的車輛拋錨或對其他道路使用者造成危險時" },
+      { "en": "Whenever you are double-parked", "zh": "停在雙排車位時" },
+      { "en": "When you want to turn right", "zh": "當你要右轉時" }
+    ],
+    "correct": 1,
+    "explanation_en": "Hazard lights should be used when your vehicle is broken down or is creating a hazard or obstruction for others.",
+    "explanation_zh": "當你的車輛拋錨，或對其他道路使用者造成危險或阻礙時，應開啟危險警示燈。"
+  },
+  {
+    "id": 63,
+    "category": "emergency",
+    "question_en": "What should you do if you feel sleepy while driving?",
+    "question_zh": "如果你在行車途中感到睏倦，應該怎麼做？",
+    "options": [
+      { "en": "Open a window for fresh air and continue", "zh": "打開車窗透透氣後繼續行駛" },
+      { "en": "Turn up the radio to stay alert", "zh": "調大收音機音量保持清醒" },
+      { "en": "Stop somewhere safe and rest", "zh": "停在安全地點休息" },
+      { "en": "Drink a coffee at the next petrol station", "zh": "在下一個加油站喝咖啡" }
+    ],
+    "correct": 2,
+    "explanation_en": "If you feel sleepy while driving, you must stop somewhere safe and rest. Fatigue is a major cause of road crashes.",
+    "explanation_zh": "如果在行駛中感到睏倦，必須停在安全地點休息。疲勞駕駛是道路事故的主要原因之一。"
+  },
+  {
+    "id": 64,
+    "category": "emergency",
+    "question_en": "An ambulance or fire engine is approaching from behind with its siren and red lights on. What should you do?",
+    "question_zh": "一輛救護車或消防車鳴笛並亮著紅燈從後方接近，你應該怎麼做？",
+    "options": [
+      { "en": "Maintain your speed so the emergency vehicle can follow you", "zh": "維持車速，讓緊急車輛跟在你後面" },
+      { "en": "Speed up and turn at the next intersection", "zh": "加速並在下一個路口轉彎" },
+      { "en": "Stop immediately wherever you are", "zh": "立即在原地停車" },
+      { "en": "Pull over to the left and let it pass when it is safe", "zh": "靠左停車，在安全時讓其通過" }
+    ],
+    "correct": 3,
+    "explanation_en": "When an emergency vehicle approaches with siren and lights, pull over to the left when it is safe and let it pass.",
+    "explanation_zh": "當緊急車輛鳴笛亮燈接近時，在安全時靠左停車讓其通過。"
+  },
+  {
+    "id": 65,
+    "category": "emergency",
+    "question_en": "Your headlights suddenly fail at night on a country road. What should you do?",
+    "question_zh": "夜間在鄉村道路行駛時頭燈突然故障，你應該怎麼做？",
+    "options": [
+      { "en": "Continue driving slowly with your hazard lights on", "zh": "開啟危險警示燈繼續慢速行駛" },
+      { "en": "Slow down and pull off the road to a safe stop", "zh": "減速並駛離道路，安全停車" },
+      { "en": "Switch to high beam immediately", "zh": "立即切換為遠光燈" },
+      { "en": "Keep driving and use your phone torch to see ahead", "zh": "繼續行駛並用手機手電筒照明前方" }
+    ],
+    "correct": 1,
+    "explanation_en": "If headlights fail at night, slow down immediately and pull off the road to a safe stop. Do not continue driving.",
+    "explanation_zh": "夜間頭燈故障時，應立即減速並駛離道路安全停車，不得繼續行駛。"
+  },
+  {
+    "id": 66,
+    "category": "emergency",
+    "question_en": "A reflectorised triangle is placed at the side of the road ahead. What does this mean?",
+    "question_zh": "前方路旁放置了一個反光三角標誌，這代表什麼？",
+    "options": [
+      { "en": "Road works are ahead", "zh": "前方有道路施工" },
+      { "en": "A vehicle has broken down ahead", "zh": "前方有車輛拋錨" },
+      { "en": "A school crossing is nearby", "zh": "附近有學校穿越道" },
+      { "en": "You must slow to 20 km/h", "zh": "你必須減速至時速20公里" }
+    ],
+    "correct": 1,
+    "explanation_en": "A reflectorised triangle at the roadside warns that a vehicle has broken down ahead. Slow down and be prepared to pass safely.",
+    "explanation_zh": "路旁放置的反光三角標誌警示前方有車輛拋錨，應減速並準備安全通過。"
+  },
+  {
+    "id": 67,
+    "category": "emergency",
+    "question_en": "If you are involved in a crash and someone is hurt, what must you do about the Police?",
+    "question_zh": "若你涉及車禍且有人受傷，關於警察你必須怎麼做？",
+    "options": [
+      { "en": "You only need to report it if the damage exceeds $1,000", "zh": "僅在損失超過1,000元時才需要報告" },
+      { "en": "You must report it to the Police as soon as practicable and within 24 hours", "zh": "你必須盡快向警察報告，並在24小時內完成" },
+      { "en": "You only need to report it if another driver asks you to", "zh": "只有在另一位駕駛要求時才需要報告" },
+      { "en": "The hospital will notify Police on your behalf", "zh": "醫院會代你通知警察" }
+    ],
+    "correct": 1,
+    "explanation_en": "If anyone is hurt in a crash you are involved in, you must report it to the Police as soon as practicable and within 24 hours.",
+    "explanation_zh": "若你涉及的車禍造成人員受傷，必須盡快向警察報告，且必須在24小時內完成。"
+  },
+  {
+    "id": 68,
+    "category": "emergency",
+    "question_en": "If your car breaks down on a motorway, what should you do?",
+    "question_zh": "若你的車在快速道路上拋錨，應該怎麼做？",
+    "options": [
+      { "en": "Stop in the left lane and turn on hazard lights", "zh": "在左線停車並開啟危險警示燈" },
+      { "en": "Pull onto the left shoulder as far left as possible and put on hazard lights", "zh": "盡量靠左駛入路肩，並開啟危險警示燈" },
+      { "en": "Stop in the right lane so you are more visible", "zh": "在右線停車以便更容易被看見" },
+      { "en": "Coast to the nearest exit at walking speed", "zh": "以步行速度慢慢滑行至最近的出口" }
+    ],
+    "correct": 1,
+    "explanation_en": "If your car breaks down on a motorway, pull onto the left shoulder as far from the traffic lanes as possible and put on hazard lights.",
+    "explanation_zh": "若在快速道路上拋錨，應盡量靠左駛入路肩，遠離行車線，並開啟危險警示燈。"
+  },
+  {
+    "id": 69,
+    "category": "emergency",
+    "question_en": "Glass falls off your vehicle and lands on the road. What must you do?",
+    "question_zh": "玻璃從你的車輛掉落到路面上，你必須怎麼做？",
+    "options": [
+      { "en": "Nothing — it is the next driver's responsibility to avoid it", "zh": "不用做什麼——避開是下一位駕駛的責任" },
+      { "en": "You must remove the glass from the road / clear the hazard", "zh": "你必須清除路面上的玻璃／消除危險" },
+      { "en": "Alert the next driver by flashing your hazard lights and continue", "zh": "閃危險警示燈提醒下一位駕駛後繼續行駛" },
+      { "en": "Report it to the road authority within 48 hours", "zh": "在48小時內向道路管理機關報告" }
+    ],
+    "correct": 1,
+    "explanation_en": "If glass or other hazardous material falls from your vehicle onto the road, you must clear the road of that material to remove the hazard.",
+    "explanation_zh": "若玻璃或其他危險物品從你的車輛掉落到路面，你必須清除路面上的該物品以消除危險。"
+  },
+  {
+    "id": 70,
+    "category": "specialist",
+    "question_en": "What is the minimum legal tyre tread depth for a car in New Zealand?",
+    "question_zh": "紐西蘭汽車輪胎花紋深度的最低法定要求是多少？",
+    "options": [
+      { "en": "3 mm", "zh": "3毫米" },
+      { "en": "1.5 mm", "zh": "1.5毫米" },
+      { "en": "2.5 mm", "zh": "2.5毫米" },
+      { "en": "1 mm", "zh": "1毫米" }
+    ],
+    "correct": 1,
+    "explanation_en": "The minimum legal tyre tread depth in New Zealand is 1.5 mm across the main grooves.",
+    "explanation_zh": "紐西蘭輪胎花紋深度的最低法定要求為1.5毫米，適用於主要溝槽。"
+  },
+  {
+    "id": 71,
+    "category": "specialist",
+    "question_en": "A restricted licence holder must not drive between which hours without an approved supervisor?",
+    "question_zh": "限制執照持有人在沒有核准監督員的情況下，不得在哪些時段行駛？",
+    "options": [
+      { "en": "Between 9 pm and 6 am", "zh": "晚上9點至早上6點之間" },
+      { "en": "Between 10 pm and 5 am", "zh": "晚上10點至早上5點之間" },
+      { "en": "Between 11 pm and 5 am", "zh": "晚上11點至早上5點之間" },
+      { "en": "Between 10 pm and 6 am", "zh": "晚上10點至早上6點之間" }
+    ],
+    "correct": 1,
+    "explanation_en": "A restricted licence holder must not drive unsupervised between 10 pm and 5 am.",
+    "explanation_zh": "限制執照持有人不得在沒有監督員的情況下，於晚上10點至早上5點之間行駛。"
+  },
+  {
+    "id": 72,
+    "category": "specialist",
+    "question_en": "What is the maximum speed you should drive when a space-saver spare tyre is fitted?",
+    "question_zh": "安裝緊急備用輪胎（窄胎）時，最高可以以多快的速度行駛？",
+    "options": [
+      { "en": "100 km/h", "zh": "時速100公里" },
+      { "en": "80 km/h", "zh": "時速80公里" },
+      { "en": "60 km/h", "zh": "時速60公里" },
+      { "en": "50 km/h", "zh": "時速50公里" }
+    ],
+    "correct": 1,
+    "explanation_en": "When a space-saver spare tyre is fitted, you must not exceed 80 km/h.",
+    "explanation_zh": "安裝緊急備用輪胎（窄胎）時，不得超過時速80公里。"
+  },
+  {
+    "id": 73,
+    "category": "specialist",
+    "question_en": "What is the maximum open-road speed for a car that is towing a trailer?",
+    "question_zh": "汽車拖掛拖車時，在開放道路上的最高速限是多少？",
+    "options": [
+      { "en": "100 km/h", "zh": "時速100公里" },
+      { "en": "80 km/h", "zh": "時速80公里" },
+      { "en": "90 km/h", "zh": "時速90公里" },
+      { "en": "70 km/h", "zh": "時速70公里" }
+    ],
+    "correct": 2,
+    "explanation_en": "When towing a trailer, the maximum open-road speed for a car is 90 km/h.",
+    "explanation_zh": "汽車拖掛拖車時，在開放道路上的最高速限為時速90公里。"
+  },
+  {
+    "id": 74,
+    "category": "specialist",
+    "question_en": "Must a learner driver carry their licence when driving?",
+    "question_zh": "學習駕照持有人在開車時必須隨身攜帶駕照嗎？",
+    "options": [
+      { "en": "No, the supervisor's licence is sufficient", "zh": "不必，監督員的駕照已經足夠" },
+      { "en": "Only on open roads, not in urban areas", "zh": "僅在開放道路上，市區不需要" },
+      { "en": "Yes, the learner must carry their licence at all times when driving", "zh": "是的，學員開車時必須隨時攜帶駕照" },
+      { "en": "Only during the first six months after getting the licence", "zh": "僅在取得駕照後的前六個月" }
+    ],
+    "correct": 2,
+    "explanation_en": "A learner driver must always carry their licence when driving and must produce it if requested by a police officer.",
+    "explanation_zh": "學習駕照持有人開車時必須隨時攜帶駕照，並在警察要求時出示。"
+  },
+  {
+    "id": 75,
+    "category": "specialist",
+    "question_en": "Where must L plates (learner plates) be displayed on a vehicle driven by a learner?",
+    "question_zh": "學員駕駛的車輛上，L牌（學習駕照牌）必須展示在哪裡？",
+    "options": [
+      { "en": "On the front of the vehicle only", "zh": "僅在車輛前方" },
+      { "en": "On the back of the vehicle only", "zh": "僅在車輛後方" },
+      { "en": "On both the front and back of the vehicle", "zh": "在車輛前方及後方" },
+      { "en": "Inside the windscreen where it can be seen", "zh": "在擋風玻璃內側使人可見" }
+    ],
+    "correct": 2,
+    "explanation_en": "L plates must be displayed on both the front and the back of a vehicle being driven by a learner driver.",
+    "explanation_zh": "學員駕駛的車輛前方及後方都必須展示L牌。"
+  },
+  {
+    "id": 76,
+    "category": "specialist",
+    "question_en": "What is the purpose of a warrant of fitness (WoF)?",
+    "question_zh": "適路性檢驗（WoF）的目的是什麼？",
+    "options": [
+      { "en": "To show the vehicle's market value", "zh": "顯示車輛的市場價值" },
+      { "en": "To confirm the vehicle has met required safety standards at the time of inspection", "zh": "確認車輛在檢驗時符合規定的安全標準" },
+      { "en": "To prove the vehicle is insured", "zh": "證明車輛已投保" },
+      { "en": "To register the vehicle with the NZTA", "zh": "向紐西蘭交通署登記車輛" }
+    ],
+    "correct": 1,
+    "explanation_en": "A warrant of fitness (WoF) shows that the vehicle met the required safety standards at the time it was inspected.",
+    "explanation_zh": "適路性檢驗（WoF）確認車輛在檢驗時符合規定的安全標準。"
+  },
+  {
+    "id": 77,
+    "category": "specialist",
+    "question_en": "Your vehicle has a current WoF, but you notice a rear stop light is not working. What should you do?",
+    "question_zh": "你的車輛持有有效適路性檢驗，但你發現後方煞車燈不亮，你應該怎麼做？",
+    "options": [
+      { "en": "Continue driving — the current WoF means the vehicle is legal", "zh": "繼續行駛——有效的WoF表示車輛合法" },
+      { "en": "Do not drive until the light is repaired", "zh": "在煞車燈修好之前不得行駛" },
+      { "en": "Tape a red cloth over the area as a temporary fix", "zh": "暫時用紅布貼住該部位作為替代" },
+      { "en": "Report it to NZTA within 7 days", "zh": "在7天內向紐西蘭交通署報告" }
+    ],
+    "correct": 1,
+    "explanation_en": "A WoF is only a snapshot in time. If a stop light fails after the inspection, you must not drive until it is repaired — the vehicle is no longer safe.",
+    "explanation_zh": "WoF只是某一時間點的檢驗結果。若煞車燈在檢驗後發生故障，在修好之前不得行駛，因為車輛已不安全。"
+  },
+  {
+    "id": 78,
+    "category": "specialist",
+    "question_en": "What is the maximum load overhang allowed behind the rear of a vehicle?",
+    "question_zh": "車輛後方允許的最大載物突出長度是多少？",
+    "options": [
+      { "en": "2 metres", "zh": "2公尺" },
+      { "en": "3 metres", "zh": "3公尺" },
+      { "en": "4 metres", "zh": "4公尺" },
+      { "en": "6 metres", "zh": "6公尺" }
+    ],
+    "correct": 2,
+    "explanation_en": "The maximum rear overhang for a load is 4 metres behind the rear of the vehicle.",
+    "explanation_zh": "車輛後方允許的最大載物突出長度為4公尺。"
+  },
+  {
+    "id": 79,
+    "category": "specialist",
+    "question_en": "What is the maximum distance allowed between a towing vehicle and the vehicle it is towing?",
+    "question_zh": "拖車與被拖車輛之間允許的最大距離是多少？",
+    "options": [
+      { "en": "2 metres", "zh": "2公尺" },
+      { "en": "4 metres", "zh": "4公尺" },
+      { "en": "6 metres", "zh": "6公尺" },
+      { "en": "8 metres", "zh": "8公尺" }
+    ],
+    "correct": 1,
+    "explanation_en": "The maximum distance allowed between a towing vehicle and the vehicle being towed is 4 metres.",
+    "explanation_zh": "拖車與被拖車輛之間允許的最大距離為4公尺。"
+  },
+  {
+    "id": 80,
+    "category": "specialist",
+    "question_en": "A vehicle being towed at night must show which lights?",
+    "question_zh": "被拖行的車輛在夜間必須顯示哪些燈光？",
+    "options": [
+      { "en": "No lights are required if the towing vehicle's lights are on", "zh": "若拖車車頭燈已亮，被拖車輛不需要燈光" },
+      { "en": "Red rear lights or reflectors at the back", "zh": "後方須顯示紅色尾燈或反光片" },
+      { "en": "Hazard lights only", "zh": "僅需開啟危險警示燈" },
+      { "en": "White lights at both front and rear", "zh": "前後方均需白色燈光" }
+    ],
+    "correct": 1,
+    "explanation_en": "A vehicle being towed at night must display red rear lights or reflectors at the back so it is visible to following traffic.",
+    "explanation_zh": "被拖行的車輛在夜間後方必須顯示紅色尾燈或反光片，以便後方車輛看見。"
+  },
+  {
+    "id": 81,
+    "category": "specialist",
+    "question_en": "On a learner licence, who may travel as passengers in your vehicle?",
+    "question_zh": "持有學習執照時，哪些人可以乘坐你的車輛？",
+    "options": [
+      { "en": "Anyone — there is no passenger restriction", "zh": "任何人——沒有乘客限制" },
+      { "en": "Only family members", "zh": "僅限家庭成員" },
+      { "en": "Only a supervisor — no other passengers allowed", "zh": "僅限監督員乘坐，不得攜帶其他乘客" },
+      { "en": "Passengers may travel if a supervisor is also present in the vehicle", "zh": "若車內同時有監督員，其他乘客也可乘坐" }
+    ],
+    "correct": 3,
+    "explanation_en": "On a learner licence, you may carry passengers as long as a supervisor is present in the vehicle.",
+    "explanation_zh": "持有學習執照時，只要車內有監督員，其他乘客也可以乘坐。"
+  },
+  {
+    "id": 82,
+    "category": "specialist",
+    "question_en": "Your front tyre blows out while driving. What happens and what should you do?",
+    "question_zh": "行駛中前輪爆胎，車輛會有什麼反應？你應該怎麼做？",
+    "options": [
+      { "en": "The car pulls away from the blown tyre; steer away from the pull and brake hard", "zh": "車輛偏向爆胎的反方向；往反方向轉向並用力煞車" },
+      { "en": "The car pulls toward the blown tyre; hold the steering firmly, ease off the accelerator, and slow down gradually", "zh": "車輛偏向爆胎側；穩握方向盤，慢慢放開油門，逐漸減速" },
+      { "en": "The car lifts on one side; immediately apply the handbrake", "zh": "車輛一側抬起；立即拉起手煞車" },
+      { "en": "The car spins; steer in the opposite direction of spin", "zh": "車輛旋轉；朝旋轉的反方向轉向" }
+    ],
+    "correct": 1,
+    "explanation_en": "A front tyre blowout causes the car to pull toward the blown tyre. Hold the steering firmly, ease off the accelerator, and slow down gradually — do not brake hard.",
+    "explanation_zh": "前輪爆胎會使車輛偏向爆胎側。應穩握方向盤，慢慢放開油門，逐漸減速，不得用力煞車。"
+  },
+  {
+    "id": 83,
+    "category": "specialist",
+    "question_en": "Your rear tyre blows out while driving. What is likely to happen?",
+    "question_zh": "行駛中後輪爆胎，車輛最可能會有什麼反應？",
+    "options": [
+      { "en": "The front of the car will lift up", "zh": "車輛前部會抬起" },
+      { "en": "The rear of the vehicle may sway or fishtail; hold the steering firmly and slow down gradually", "zh": "車輛後部可能左右搖擺或甩尾；穩握方向盤，逐漸減速" },
+      { "en": "The vehicle will stop automatically", "zh": "車輛會自動停車" },
+      { "en": "The steering becomes very light — steer more aggressively to compensate", "zh": "方向盤變得很輕——需更大幅度轉向以補償" }
+    ],
+    "correct": 1,
+    "explanation_en": "A rear tyre blowout may cause the back of the vehicle to sway or fishtail. Hold the steering firmly and slow down gradually — do not brake suddenly.",
+    "explanation_zh": "後輪爆胎可能導致車輛後部左右搖擺或甩尾。應穩握方向盤，逐漸減速，不得急煞。"
+  },
+  {
+    "id": 84,
+    "category": "specialist",
+    "question_en": "The bonnet flies open and blocks your view while driving. What should you do?",
+    "question_zh": "行駛中引擎蓋彈起遮住你的視線，你應該怎麼做？",
+    "options": [
+      { "en": "Accelerate briefly to force the bonnet back down", "zh": "短暫加速以迫使引擎蓋復位" },
+      { "en": "Slam on the brakes immediately", "zh": "立即大力踩煞車" },
+      { "en": "Slow down, look through the side window or use mirrors, and pull over safely", "zh": "減速，從側窗觀察或利用後視鏡，安全靠邊停車" },
+      { "en": "Reach out the window and push the bonnet down", "zh": "從車窗伸出手將引擎蓋按下" }
+    ],
+    "correct": 2,
+    "explanation_en": "If the bonnet flies up, slow down, use the side window or mirrors to see, and steer carefully to pull over safely.",
+    "explanation_zh": "若引擎蓋彈起，應減速，從側窗觀察或利用後視鏡，謹慎轉向安全靠邊停車。"
+  },
+  {
+    "id": 85,
+    "category": "specialist",
+    "question_en": "When parking facing downhill on a steep road with a kerb, which way do you turn the front wheels?",
+    "question_zh": "在有路緣的陡坡上面朝下坡停車時，前輪應轉向哪個方向？",
+    "options": [
+      { "en": "Turn wheels to the left (away from the kerb)", "zh": "前輪向左轉（遠離路緣）" },
+      { "en": "Keep wheels straight along the kerb", "zh": "車輪保持直行靠著路緣" },
+      { "en": "Turn wheels to the right (toward the kerb)", "zh": "前輪向右轉（朝向路緣）" },
+      { "en": "Direction does not matter if the handbrake is fully applied", "zh": "只要手煞車完全拉緊，方向無所謂" }
+    ],
+    "correct": 2,
+    "explanation_en": "When parking facing downhill next to a kerb, turn the front wheels toward the kerb (right) and apply the handbrake. If the car rolls, the kerb prevents it from moving into traffic.",
+    "explanation_zh": "在有路緣的陡坡面朝下坡停車時，前輪應朝向路緣（向右）並拉起手煞車。若車輛滑動，路緣可防止車輛衝入車道。"
+  }
+]
