@@ -16,6 +16,8 @@ export interface Question {
   correct: number;          // 0-based index into options
   explanation_en: string;
   explanation_zh: string;
+  /** Optional road-sign key rendered as an SVG above the question (see SignIcon). */
+  sign?: string;
 }
 
 /** A question paired with the index the user selected (null = unanswered). */

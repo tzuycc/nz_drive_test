@@ -53,6 +53,8 @@ Each question in `/data/questions.json`:
 
 **Topic coverage:** traffic signs, speed limits, right of way, safe following distance, alcohol/drug rules, special road conditions, roundabouts, pedestrian crossings.
 
+**Sign images:** Questions may include an optional `sign` field — a key referencing a road-sign rendered as inline SVG (via a `SignIcon` component). This lets the bank include image-based sign questions (e.g. "What does this sign mean?") without external image assets or copyright concerns. Signs are standardised NZ road symbols drawn as original SVG. Supported keys (v1): `stop`, `give-way`, `speed-50`, `speed-100`, `derestriction`, `no-entry`, `no-left-turn`, `railway-crossing`, `roundabout`, `crossroads`, `pedestrian-crossing`, `accident`, `road-works`, `one-lane-bridge-give-way`, `one-lane-bridge-priority`.
+
 ---
 
 ## Screens
