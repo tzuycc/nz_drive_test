@@ -32,11 +32,21 @@ export default function Page() {
       )}
 
       {screen === "practice" && (
-        <PracticeScreen bank={BANK} onExit={() => setScreen("home")} />
+        <PracticeScreen
+          bank={BANK}
+          onExit={() => setScreen("home")}
+          isFavorited={isFavorited}
+          onToggleFavorite={toggle}
+        />
       )}
 
       {screen === "favorites" && (
-        <PracticeScreen bank={favoritesBank} onExit={() => setScreen("home")} />
+        <PracticeScreen
+          bank={favoritesBank}
+          onExit={() => setScreen("home")}
+          isFavorited={isFavorited}
+          onToggleFavorite={toggle}
+        />
       )}
 
       {screen === "exam" && (
@@ -55,6 +65,8 @@ export default function Page() {
           answers={examAnswers}
           onRetry={() => setScreen("exam")}
           onHome={() => setScreen("home")}
+          isFavorited={isFavorited}
+          onToggleFavorite={toggle}
         />
       )}
     </main>

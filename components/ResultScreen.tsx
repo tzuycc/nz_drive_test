@@ -2,7 +2,6 @@
 
 import type { AnsweredQuestion } from "@/lib/types";
 import { scoreExam } from "@/lib/quiz";
-import { useFavorites } from "@/lib/favorites";
 import QuestionCard from "@/components/QuestionCard";
 import ExplanationPanel from "@/components/ExplanationPanel";
 
@@ -10,11 +9,12 @@ interface Props {
   answers: AnsweredQuestion[];
   onRetry: () => void;
   onHome: () => void;
+  isFavorited: (id: number) => boolean;
+  onToggleFavorite: (id: number) => void;
 }
 
-export default function ResultScreen({ answers, onRetry, onHome }: Props) {
+export default function ResultScreen({ answers, onRetry, onHome, isFavorited, onToggleFavorite }: Props) {
   const { correct, total, passed } = scoreExam(answers);
-  const { isFavorited, toggle } = useFavorites();
 
   // Split into wrong first, then correct
   const wrong = answers.filter((a) => a.selected !== a.question.correct);
@@ -30,7 +30,7 @@ export default function ResultScreen({ answers, onRetry, onHome }: Props) {
         revealCorrect
         onSelect={() => {}}
         isFavorited={isFavorited(a.question.id)}
-        onToggleFavorite={toggle}
+        onToggleFavorite={onToggleFavorite}
       />
       <ExplanationPanel question={a.question} selected={a.selected} />
     </div>

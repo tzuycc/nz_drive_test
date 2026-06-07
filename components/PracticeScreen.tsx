@@ -3,20 +3,20 @@
 import { useMemo, useState } from "react";
 import type { Question } from "@/lib/types";
 import { shuffle } from "@/lib/quiz";
-import { useFavorites } from "@/lib/favorites";
 import QuestionCard from "@/components/QuestionCard";
 import ExplanationPanel from "@/components/ExplanationPanel";
 
 interface Props {
   bank: Question[];
   onExit: () => void;
+  isFavorited: (id: number) => boolean;
+  onToggleFavorite: (id: number) => void;
 }
 
-export default function PracticeScreen({ bank, onExit }: Props) {
+export default function PracticeScreen({ bank, onExit, isFavorited, onToggleFavorite }: Props) {
   const questions = useMemo(() => shuffle(bank), [bank]);
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
-  const { isFavorited, toggle } = useFavorites();
 
   const current = questions[index];
   const answered = selected !== null;
@@ -47,7 +47,7 @@ export default function PracticeScreen({ bank, onExit }: Props) {
         revealCorrect={answered}
         onSelect={(i) => !answered && setSelected(i)}
         isFavorited={isFavorited(current.id)}
-        onToggleFavorite={toggle}
+        onToggleFavorite={onToggleFavorite}
       />
 
       {answered && <ExplanationPanel question={current} selected={selected} />}
