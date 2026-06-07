@@ -5,6 +5,7 @@ import type { AnsweredQuestion, Question } from "@/lib/types";
 import rawQuestions from "@/data/questions.json";
 import { useFavorites } from "@/lib/favorites";
 import { useWrongBank } from "@/lib/wrongBank";
+import { usePracticeProgress } from "@/lib/practiceProgress";
 import {
   trackExamStarted,
   trackExamCompleted,
@@ -27,6 +28,11 @@ export default function Page() {
   const { favorites, isFavorited, toggle } = useFavorites();
   const { wrongIds, addWrong, removeMastered, clearAll: clearWrongBank } = useWrongBank();
 
+  // Practice progress: persisted order + current position
+  const allBankIds = BANK.map((q) => q.id);
+  const { orderedIds, currentIndex, completedRounds, saveIndex } = usePracticeProgress(allBankIds);
+  const orderedBank = orderedIds.map((id) => BANK.find((q) => q.id === id)!);
+
   const favoritesBank = BANK.filter((q) => favorites.includes(q.id));
   const wrongBank = BANK.filter((q) => wrongIds.includes(q.id));
 
@@ -41,6 +47,7 @@ export default function Page() {
       {screen === "home" && (
         <HomeScreen
           onStartPractice={() => { trackPracticeStarted("all"); setScreen("practice"); }}
+          practiceProgress={{ done: currentIndex, total: BANK.length, rounds: completedRounds }}
           onStartExam={() => { trackExamStarted(); setScreen("exam"); }}
           favoritesCount={favoritesBank.length}
           onStartFavorites={() => { trackPracticeStarted("favorites"); setScreen("favorites"); }}
@@ -52,8 +59,11 @@ export default function Page() {
 
       {screen === "practice" && (
         <PracticeScreen
-          bank={BANK}
+          bank={orderedBank}
           mode="all"
+          noShuffle
+          startIndex={currentIndex}
+          onIndexChange={saveIndex}
           onExit={() => setScreen("home")}
           isFavorited={isFavorited}
           onToggleFavorite={toggle}

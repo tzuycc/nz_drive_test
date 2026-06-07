@@ -16,12 +16,28 @@ interface Props {
   mode?: "all" | "favorites" | "wrong";
   /** If provided, show "✓ 學會了" button when answered correctly (wrong-bank mode) */
   onMastered?: (id: number) => void;
+  /** Resume from this index (for persisted sessions). Default: 0 */
+  startIndex?: number;
+  /** Skip internal shuffle — bank is already in the desired order */
+  noShuffle?: boolean;
+  /** Called with the new index whenever the session advances or exits */
+  onIndexChange?: (newIndex: number) => void;
 }
 
-export default function PracticeScreen({ bank, onExit, isFavorited, onToggleFavorite, mode = "all", onMastered }: Props) {
-  // Shuffle once on mount using lazy initializer — stable across re-renders
-  const [questions] = useState<Question[]>(() => shuffle(bank));
-  const [index, setIndex] = useState(0);
+export default function PracticeScreen({
+  bank,
+  onExit,
+  isFavorited,
+  onToggleFavorite,
+  mode = "all",
+  onMastered,
+  startIndex = 0,
+  noShuffle = false,
+  onIndexChange,
+}: Props) {
+  // Use provided order (noShuffle) or shuffle once on mount
+  const [questions] = useState<Question[]>(() => noShuffle ? bank : shuffle(bank));
+  const [index, setIndexState] = useState(startIndex);
   const [selected, setSelected] = useState<number | null>(null);
 
   const current = questions[index];
@@ -44,13 +60,18 @@ export default function PracticeScreen({ bank, onExit, isFavorited, onToggleFavo
   const questionsAnswered = answered ? index + 1 : index;
 
   function exit() {
+    // Save progress: if current Q was answered, advance past it; otherwise stay
+    const saveAt = answered ? index + 1 : index;
+    onIndexChange?.(saveAt);
     trackPracticeCompleted(mode, questionsAnswered, questions.length);
     onExit();
   }
 
   function next() {
+    const newIndex = index + 1;
+    onIndexChange?.(newIndex);
     setSelected(null);
-    setIndex((i) => Math.min(i + 1, questions.length - 1));
+    setIndexState(newIndex);
   }
 
   return (
@@ -87,7 +108,7 @@ export default function PracticeScreen({ bank, onExit, isFavorited, onToggleFavo
               onClick={() => {
                 trackQuestionMastered(current.id);
                 onMastered(current.id);
-                if (isLast) exit();
+                if (isLast) { onIndexChange?.(index + 1); exit(); }
                 else next();
               }}
               className="w-full rounded-xl bg-emerald-600 px-6 py-3 font-semibold text-white transition hover:bg-emerald-700"

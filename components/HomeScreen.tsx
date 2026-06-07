@@ -6,6 +6,7 @@ interface Props {
   wrongCount: number;
   onStartWrongPractice: () => void;
   onClearWrongBank: () => void;
+  practiceProgress: { done: number; total: number; rounds: number };
 }
 
 export default function HomeScreen({
@@ -16,6 +17,7 @@ export default function HomeScreen({
   wrongCount,
   onStartWrongPractice,
   onClearWrongBank,
+  practiceProgress,
 }: Props) {
   return (
     <div className="mx-auto max-w-xl text-center">
@@ -30,13 +32,34 @@ export default function HomeScreen({
       </p>
 
       <div className="mt-8 space-y-4">
-        <button
-          type="button"
-          onClick={onStartPractice}
-          className="w-full rounded-xl bg-blue-600 px-6 py-4 text-lg font-semibold text-white transition hover:bg-blue-700"
-        >
-          Practice Mode 練習模式
-        </button>
+        <div>
+          <button
+            type="button"
+            onClick={onStartPractice}
+            className="w-full rounded-xl bg-blue-600 px-6 py-4 text-lg font-semibold text-white transition hover:bg-blue-700"
+          >
+            Practice Mode 練習模式
+          </button>
+          {/* Progress bar */}
+          <div className="mt-2 px-1">
+            <div className="mb-1 flex justify-between text-xs text-gray-500">
+              <span>
+                已練習 {practiceProgress.done} / {practiceProgress.total} 題
+              </span>
+              {practiceProgress.rounds > 0 && (
+                <span>第 {practiceProgress.rounds + 1} 輪</span>
+              )}
+            </div>
+            <div className="h-1.5 w-full overflow-hidden rounded-full bg-gray-200">
+              <div
+                className="h-full rounded-full bg-blue-400 transition-all"
+                style={{
+                  width: `${Math.round((practiceProgress.done / practiceProgress.total) * 100)}%`,
+                }}
+              />
+            </div>
+          </div>
+        </div>
         <button
           type="button"
           onClick={onStartExam}
