@@ -53,6 +53,7 @@ export default function Page() {
       {screen === "practice" && (
         <PracticeScreen
           bank={BANK}
+          mode="all"
           onExit={() => setScreen("home")}
           isFavorited={isFavorited}
           onToggleFavorite={toggle}
@@ -62,6 +63,7 @@ export default function Page() {
       {screen === "favorites" && (
         <PracticeScreen
           bank={favoritesBank}
+          mode="favorites"
           onExit={() => setScreen("home")}
           isFavorited={isFavorited}
           onToggleFavorite={toggle}
@@ -71,6 +73,7 @@ export default function Page() {
       {screen === "wrong-practice" && (
         <PracticeScreen
           bank={wrongBank}
+          mode="wrong"
           onExit={() => setScreen("home")}
           isFavorited={isFavorited}
           onToggleFavorite={toggle}

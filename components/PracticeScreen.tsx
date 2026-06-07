@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { Question } from "@/lib/types";
 import { shuffle } from "@/lib/quiz";
-import { trackQuestionMastered } from "@/lib/analytics";
+import { trackPracticeCompleted, trackQuestionMastered } from "@/lib/analytics";
 import QuestionCard from "@/components/QuestionCard";
 import ExplanationPanel from "@/components/ExplanationPanel";
 
@@ -12,11 +12,13 @@ interface Props {
   onExit: () => void;
   isFavorited: (id: number) => boolean;
   onToggleFavorite: (id: number) => void;
+  /** Which practice mode — used for analytics */
+  mode?: "all" | "favorites" | "wrong";
   /** If provided, show "✓ 學會了" button when answered correctly (wrong-bank mode) */
   onMastered?: (id: number) => void;
 }
 
-export default function PracticeScreen({ bank, onExit, isFavorited, onToggleFavorite, onMastered }: Props) {
+export default function PracticeScreen({ bank, onExit, isFavorited, onToggleFavorite, mode = "all", onMastered }: Props) {
   // Shuffle once on mount using lazy initializer — stable across re-renders
   const [questions] = useState<Question[]>(() => shuffle(bank));
   const [index, setIndex] = useState(0);
@@ -38,6 +40,13 @@ export default function PracticeScreen({ bank, onExit, isFavorited, onToggleFavo
 
   const answered = selected !== null;
   const isLast = index === questions.length - 1;
+  // Questions answered so far: index + 1 if current is answered, else index
+  const questionsAnswered = answered ? index + 1 : index;
+
+  function exit() {
+    trackPracticeCompleted(mode, questionsAnswered, questions.length);
+    onExit();
+  }
 
   function next() {
     setSelected(null);
@@ -51,7 +60,7 @@ export default function PracticeScreen({ bank, onExit, isFavorited, onToggleFavo
           Question {index + 1} / {questions.length}　第 {index + 1} 題 / 共{" "}
           {questions.length} 題
         </span>
-        <button type="button" onClick={onExit} className="text-blue-600 hover:underline">
+        <button type="button" onClick={exit} className="text-blue-600 hover:underline">
           End Practice 結束練習
         </button>
       </div>
@@ -78,7 +87,7 @@ export default function PracticeScreen({ bank, onExit, isFavorited, onToggleFavo
               onClick={() => {
                 trackQuestionMastered(current.id);
                 onMastered(current.id);
-                if (isLast) onExit();
+                if (isLast) exit();
                 else next();
               }}
               className="w-full rounded-xl bg-emerald-600 px-6 py-3 font-semibold text-white transition hover:bg-emerald-700"
@@ -99,7 +108,7 @@ export default function PracticeScreen({ bank, onExit, isFavorited, onToggleFavo
           ) : (
             <button
               type="button"
-              onClick={onExit}
+              onClick={exit}
               className="w-full rounded-xl bg-gray-700 px-6 py-3 font-semibold text-white transition hover:bg-gray-800"
             >
               Finish 完成練習

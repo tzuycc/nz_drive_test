@@ -41,6 +41,22 @@ export function trackPracticeStarted(mode: "all" | "favorites" | "wrong") {
   gtag("event", "practice_started", { mode });
 }
 
+/** Fired when user exits or finishes a practice session */
+export function trackPracticeCompleted(
+  mode: "all" | "favorites" | "wrong",
+  questionsAnswered: number,
+  totalQuestions: number
+) {
+  const completed = questionsAnswered === totalQuestions;
+  gtag("event", "practice_completed", {
+    mode,
+    questions_answered: questionsAnswered,
+    total_questions: totalQuestions,
+    completed,                                          // true = finished all, false = quit early
+    completion_rate: Math.round((questionsAnswered / totalQuestions) * 100),
+  });
+}
+
 // ── Favorites / wrong bank events ────────────────────────────────────────────
 
 /** Fired when a question is added to favorites */
