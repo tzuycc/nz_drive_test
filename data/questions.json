@@ -1447,13 +1447,13 @@
     "question_zh": "夜間行駛，在什麼情況下你必須將頭燈切換為近光燈（低光束）？",
     "options": [
       { "en": "Only when another vehicle is within 50 metres of you", "zh": "僅在另一車輛在50公尺以內時" },
-      { "en": "Within 100 metres of an oncoming vehicle, or when following another vehicle within 100 metres", "zh": "在對向車輛100公尺以內時，或跟隨前車在100公尺以內時" },
+      { "en": "Within 200 metres of an oncoming vehicle, or when following another vehicle", "zh": "在對向車輛200公尺以內時，或跟隨前方車輛行駛時" },
       { "en": "Only in urban areas with street lighting", "zh": "僅在有路燈的市區" },
       { "en": "Whenever you see any vehicle lights", "zh": "只要看到任何車輛燈光就要切換" }
     ],
     "correct": 1,
-    "explanation_en": "At night you must dip your headlights when within 100 metres of an oncoming vehicle, or when following another vehicle within 100 metres.",
-    "explanation_zh": "夜間行駛時，在對向車輛100公尺以內，或跟隨前車在100公尺以內時，必須將頭燈切換為近光燈。"
+    "explanation_en": "At night you must dip your headlights when within 200 metres of an oncoming vehicle, or when following another vehicle. This prevents blinding other drivers.",
+    "explanation_zh": "夜間行駛時，在對向車輛200公尺以內，或跟隨前方車輛時，必須將頭燈切換為近光燈，以避免使其他駕駛目眩。"
   },
   {
     "id": 97,
