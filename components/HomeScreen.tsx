@@ -3,6 +3,9 @@ interface Props {
   onStartExam: () => void;
   favoritesCount: number;
   onStartFavorites: () => void;
+  wrongCount: number;
+  onStartWrongPractice: () => void;
+  onClearWrongBank: () => void;
 }
 
 export default function HomeScreen({
@@ -10,6 +13,9 @@ export default function HomeScreen({
   onStartExam,
   favoritesCount,
   onStartFavorites,
+  wrongCount,
+  onStartWrongPractice,
+  onClearWrongBank,
 }: Props) {
   return (
     <div className="mx-auto max-w-xl text-center">
@@ -49,6 +55,28 @@ export default function HomeScreen({
             <span className="ml-2 text-sm opacity-80">({favoritesCount})</span>
           )}
         </button>
+
+        {/* Wrong bank — only visible when there are wrong questions */}
+        {wrongCount > 0 && (
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={onStartWrongPractice}
+              className="flex-1 rounded-xl bg-red-500 px-6 py-4 text-lg font-semibold text-white transition hover:bg-red-600"
+            >
+              ❌ 錯題練習
+              <span className="ml-2 text-sm opacity-80">({wrongCount} 題)</span>
+            </button>
+            <button
+              type="button"
+              onClick={onClearWrongBank}
+              title="清除所有錯題"
+              className="rounded-xl border-2 border-red-300 px-4 py-4 text-sm text-red-500 transition hover:bg-red-50"
+            >
+              🗑
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -49,10 +49,10 @@ export default function QuestionCard({
             <button
               type="button"
               onClick={() => onToggleFavorite(question.id)}
-              className="text-xl leading-none"
+              className="rounded-lg border border-gray-200 px-2 py-1 text-xs leading-none transition hover:border-yellow-400 hover:bg-yellow-50"
               aria-label={isFavorited ? "Remove from favorites" : "Add to favorites"}
             >
-              {isFavorited ? "⭐" : "☆"}
+              {isFavorited ? "⭐ 已收藏" : "☆ 收藏"}
             </button>
           )}
         </div>

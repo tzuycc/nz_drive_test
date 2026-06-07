@@ -11,9 +11,11 @@ interface Props {
   onExit: () => void;
   isFavorited: (id: number) => boolean;
   onToggleFavorite: (id: number) => void;
+  /** If provided, show "✓ 學會了" button when answered correctly (wrong-bank mode) */
+  onMastered?: (id: number) => void;
 }
 
-export default function PracticeScreen({ bank, onExit, isFavorited, onToggleFavorite }: Props) {
+export default function PracticeScreen({ bank, onExit, isFavorited, onToggleFavorite, onMastered }: Props) {
   // Shuffle once on mount using lazy initializer — stable across re-renders
   const [questions] = useState<Question[]>(() => shuffle(bank));
   const [index, setIndex] = useState(0);
@@ -66,24 +68,42 @@ export default function PracticeScreen({ bank, onExit, isFavorited, onToggleFavo
 
       {answered && <ExplanationPanel question={current} selected={selected} />}
 
-      {answered && !isLast && (
-        <button
-          type="button"
-          onClick={next}
-          className="mt-6 w-full rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"
-        >
-          Next Question 下一題
-        </button>
-      )}
+      {answered && (
+        <div className="mt-6 flex flex-col gap-3">
+          {/* Wrong-bank mode: show "✓ 學會了" when answered correctly */}
+          {onMastered && selected === current.correct && (
+            <button
+              type="button"
+              onClick={() => {
+                onMastered(current.id);
+                if (isLast) onExit();
+                else next();
+              }}
+              className="w-full rounded-xl bg-emerald-600 px-6 py-3 font-semibold text-white transition hover:bg-emerald-700"
+            >
+              ✓ 學會了，從錯題庫移除
+            </button>
+          )}
 
-      {answered && isLast && (
-        <button
-          type="button"
-          onClick={onExit}
-          className="mt-6 w-full rounded-xl bg-gray-700 px-6 py-3 font-semibold text-white hover:bg-gray-800"
-        >
-          Finish 完成練習
-        </button>
+          {/* Next / Finish */}
+          {!isLast ? (
+            <button
+              type="button"
+              onClick={next}
+              className="w-full rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+            >
+              {onMastered && selected === current.correct ? "繼續練習（保留在錯題庫）" : "Next Question 下一題"}
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={onExit}
+              className="w-full rounded-xl bg-gray-700 px-6 py-3 font-semibold text-white transition hover:bg-gray-800"
+            >
+              Finish 完成練習
+            </button>
+          )}
+        </div>
       )}
     </div>
   );

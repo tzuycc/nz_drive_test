@@ -197,25 +197,50 @@ export default function SignIcon({
         </>
       );
 
-    // 9. Roundabout — Blue circle with three white arrows in a ring
+    // 9. Roundabout — Blue circle with three clockwise curved white arrows
     case "roundabout":
       return wrap(
         "Roundabout sign",
         <>
+          <defs>
+            <marker
+              id="rnd-arr"
+              markerWidth="10"
+              markerHeight="8"
+              refX="9"
+              refY="4"
+              orient="auto"
+              markerUnits="userSpaceOnUse"
+            >
+              <polygon points="0,0 10,4 0,8" fill="#ffffff" />
+            </marker>
+          </defs>
           <circle cx="60" cy="60" r="56" fill="#1e5aa8" />
-          {/* Central white ring suggestion */}
-          <circle cx="60" cy="60" r="16" fill="none" stroke="#ffffff" strokeWidth="4" />
-          {/* Three white arrowheads at 0°, 120°, 240° around the ring */}
-          {/* Arrow at top (pointing right/clockwise) */}
-          <g transform="rotate(0 60 60)">
-            <polygon points="60,20 70,36 50,36" fill="#ffffff" />
-          </g>
-          <g transform="rotate(120 60 60)">
-            <polygon points="60,20 70,36 50,36" fill="#ffffff" />
-          </g>
-          <g transform="rotate(240 60 60)">
-            <polygon points="60,20 70,36 50,36" fill="#ffffff" />
-          </g>
+          {/* Three clockwise arcs, each ~70°, at 120° spacing, radius=30 from center (60,60) */}
+          {/* Arc 1: 5° → 75° */}
+          <path
+            d="M 89.9,62.6 A 30,30 0 0,1 67.8,88.9"
+            fill="none"
+            stroke="#ffffff"
+            strokeWidth="8"
+            markerEnd="url(#rnd-arr)"
+          />
+          {/* Arc 2: 125° → 195° */}
+          <path
+            d="M 42.8,84.5 A 30,30 0 0,1 31.1,52.2"
+            fill="none"
+            stroke="#ffffff"
+            strokeWidth="8"
+            markerEnd="url(#rnd-arr)"
+          />
+          {/* Arc 3: 245° → 315° */}
+          <path
+            d="M 47.3,32.8 A 30,30 0 0,1 81.2,38.8"
+            fill="none"
+            stroke="#ffffff"
+            strokeWidth="8"
+            markerEnd="url(#rnd-arr)"
+          />
         </>
       );
 
@@ -317,41 +342,37 @@ export default function SignIcon({
         </>
       );
 
-    // 14. One-lane bridge give way — White portrait rect + red arrow up (left) + black arrow down (right)
+    // 14. One-lane bridge give way — White portrait rect, large red arrow UP (left = oncoming priority), small black arrow DOWN (right = you give way)
     case "one-lane-bridge-give-way":
       return wrap(
         "Give way at one-lane bridge sign",
         <>
-          <rect x="14" y="4" width="92" height="112" rx="4" fill="#ffffff" stroke="#111111" strokeWidth="4" />
-          {/* Red arrow UP on left (larger = oncoming priority) */}
+          <rect x="10" y="4" width="100" height="112" rx="6" fill="#ffffff" stroke="#111111" strokeWidth="4" />
+          {/* Large RED arrow UP — left side (oncoming traffic has right of way) */}
+          {/* Arrowhead (wider) */}
+          <polygon points="35,10 12,44 58,44" fill="#d11f1f" />
           {/* Shaft */}
-          <rect x="26" y="32" width="18" height="60" rx="3" fill="#d11f1f" />
-          {/* Arrowhead */}
-          <polygon points="35,12 18,36 52,36" fill="#d11f1f" />
-          {/* Black arrow DOWN on right (smaller = you give way) */}
+          <rect x="23" y="42" width="24" height="62" rx="3" fill="#d11f1f" />
+          {/* Small BLACK arrow DOWN — right side (you must give way) */}
           {/* Shaft */}
-          <rect x="76" y="30" width="14" height="50" rx="3" fill="#111111" />
-          {/* Arrowhead */}
-          <polygon points="83,108 70,86 96,86" fill="#111111" />
+          <rect x="72" y="28" width="16" height="50" rx="3" fill="#111111" />
+          {/* Arrowhead (narrower) */}
+          <polygon points="80,108 64,82 96,82" fill="#111111" />
         </>
       );
 
-    // 15. One-lane bridge priority — Blue portrait rect + white arrow up + red arrow down
+    // 15. One-lane bridge priority — Blue portrait rect, large white arrow UP (left = you have priority), small red arrow DOWN (right = oncoming gives way)
     case "one-lane-bridge-priority":
       return wrap(
         "Priority at one-lane bridge sign",
         <>
-          <rect x="14" y="4" width="92" height="112" rx="4" fill="#1e5aa8" stroke="#111111" strokeWidth="4" />
-          {/* White arrow UP on left (larger = you have priority) */}
-          {/* Shaft */}
-          <rect x="26" y="32" width="18" height="60" rx="3" fill="#ffffff" />
-          {/* Arrowhead */}
-          <polygon points="35,12 18,36 52,36" fill="#ffffff" />
-          {/* Red arrow DOWN on right (smaller = oncoming gives way) */}
-          {/* Shaft */}
-          <rect x="76" y="30" width="14" height="50" rx="3" fill="#d11f1f" />
-          {/* Arrowhead */}
-          <polygon points="83,108 70,86 96,86" fill="#d11f1f" />
+          <rect x="10" y="4" width="100" height="112" rx="6" fill="#1e5aa8" stroke="#111111" strokeWidth="4" />
+          {/* Large WHITE arrow UP — left side (you have right of way) */}
+          <polygon points="35,10 12,44 58,44" fill="#ffffff" />
+          <rect x="23" y="42" width="24" height="62" rx="3" fill="#ffffff" />
+          {/* Small RED arrow DOWN — right side (oncoming must give way) */}
+          <rect x="72" y="28" width="16" height="50" rx="3" fill="#d11f1f" />
+          <polygon points="80,108 64,82 96,82" fill="#d11f1f" />
         </>
       );
 

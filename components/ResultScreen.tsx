@@ -11,9 +11,10 @@ interface Props {
   onHome: () => void;
   isFavorited: (id: number) => boolean;
   onToggleFavorite: (id: number) => void;
+  onPracticeWrong?: () => void; // navigate to wrong-bank practice for this exam's wrong Qs
 }
 
-export default function ResultScreen({ answers, onRetry, onHome, isFavorited, onToggleFavorite }: Props) {
+export default function ResultScreen({ answers, onRetry, onHome, isFavorited, onToggleFavorite, onPracticeWrong }: Props) {
   const { correct, total, passed } = scoreExam(answers);
 
   // Split into wrong first, then correct
@@ -50,21 +51,33 @@ export default function ResultScreen({ answers, onRetry, onHome, isFavorited, on
         <p className="mt-2 text-sm opacity-90">Pass mark 及格標準: 32 / 35</p>
       </div>
 
-      <div className="mt-6 flex gap-3">
-        <button
-          type="button"
-          onClick={onRetry}
-          className="flex-1 rounded-xl bg-blue-600 px-4 py-3 font-semibold text-white hover:bg-blue-700"
-        >
-          Try Again 再考一次
-        </button>
-        <button
-          type="button"
-          onClick={onHome}
-          className="flex-1 rounded-xl border-2 border-gray-300 px-4 py-3 font-semibold text-gray-700"
-        >
-          Home 回首頁
-        </button>
+      <div className="mt-6 flex flex-col gap-3">
+        {/* Practice wrong questions from this exam */}
+        {onPracticeWrong && wrong.length > 0 && (
+          <button
+            type="button"
+            onClick={onPracticeWrong}
+            className="w-full rounded-xl bg-red-500 px-4 py-3 font-semibold text-white transition hover:bg-red-600"
+          >
+            ❌ 練習這次的錯題（{wrong.length} 題）
+          </button>
+        )}
+        <div className="flex gap-3">
+          <button
+            type="button"
+            onClick={onRetry}
+            className="flex-1 rounded-xl bg-blue-600 px-4 py-3 font-semibold text-white transition hover:bg-blue-700"
+          >
+            Try Again 再考一次
+          </button>
+          <button
+            type="button"
+            onClick={onHome}
+            className="flex-1 rounded-xl border-2 border-gray-300 px-4 py-3 font-semibold text-gray-700 transition hover:bg-gray-50"
+          >
+            Home 回首頁
+          </button>
+        </div>
       </div>
 
       {wrong.length > 0 && (
