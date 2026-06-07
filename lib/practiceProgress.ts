@@ -1,18 +1,18 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { shuffle } from "@/lib/quiz";
 
 const STORAGE_KEY = "nz-practice-session";
 
 interface ProgressState {
-  order: number[]; // Question IDs in shuffled order
-  index: number;   // Current position (0-based); = number of questions completed
-  rounds: number;  // Number of completed full rounds
+  order: number[];     // Fixed shuffled order for the current round
+  practiced: number[]; // IDs practiced this round (any mode counts)
+  rounds: number;      // Completed full rounds
 }
 
 function createFresh(ids: number[]): ProgressState {
-  return { order: shuffle([...ids]), index: 0, rounds: 0 };
+  return { order: shuffle([...ids]), practiced: [], rounds: 0 };
 }
 
 export function usePracticeProgress(allIds: number[]) {
@@ -22,9 +22,12 @@ export function usePracticeProgress(allIds: number[]) {
       const saved: ProgressState = JSON.parse(
         localStorage.getItem(STORAGE_KEY) ?? "null"
       );
-      // Restore only if question count matches (guards against bank size changes)
-      if (saved?.order?.length === allIds.length) return saved;
-    } catch { /* ignore parse errors */ }
+      // Validate new format (must have practiced array, not old index-based format)
+      if (
+        saved?.order?.length === allIds.length &&
+        Array.isArray(saved?.practiced)
+      ) return saved;
+    } catch { /* ignore */ }
     return createFresh(allIds);
   });
 
@@ -32,17 +35,22 @@ export function usePracticeProgress(allIds: number[]) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   }, [state]);
 
+  const practicedSet = useMemo(() => new Set(state.practiced), [state.practiced]);
+
   /**
-   * Save progress at the given index.
-   * If newIndex >= total, the round is complete — triggers reshuffle for the next round.
+   * Mark a question as practiced (any mode).
+   * When all questions are marked, automatically starts a new round.
    */
-  const saveIndex = useCallback(
-    (newIndex: number) => {
+  const markPracticed = useCallback(
+    (id: number) => {
       setState((prev) => {
-        if (newIndex >= prev.order.length) {
-          return { order: shuffle([...allIds]), index: 0, rounds: prev.rounds + 1 };
+        if (prev.practiced.includes(id)) return prev; // already counted
+        const next = [...prev.practiced, id];
+        if (next.length >= allIds.length) {
+          // Full round complete — reshuffle for the next round
+          return { order: shuffle([...allIds]), practiced: [], rounds: prev.rounds + 1 };
         }
-        return { ...prev, index: newIndex };
+        return { ...prev, practiced: next };
       });
     },
     [allIds]
@@ -51,10 +59,11 @@ export function usePracticeProgress(allIds: number[]) {
   const reset = useCallback(() => setState(createFresh(allIds)), [allIds]);
 
   return {
-    orderedIds: state.order,
-    currentIndex: state.index,
+    orderedIds: state.order,      // Shuffled order for "All Questions" mode
+    practicedIds: practicedSet,   // Set of IDs practiced this round
+    practicedCount: state.practiced.length,
     completedRounds: state.rounds,
-    saveIndex,
+    markPracticed,
     reset,
   };
 }

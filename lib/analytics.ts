@@ -36,23 +36,36 @@ export function trackExamCompleted(score: number, total: number) {
 
 // ── Practice events ───────────────────────────────────────────────────────────
 
-/** Fired when user starts practice mode */
+/** Fired when user starts practice mode (navigates to category select) */
 export function trackPracticeStarted(mode: "all" | "favorites" | "wrong") {
   gtag("event", "practice_started", { mode });
 }
 
-/** Fired when user exits or finishes a practice session */
+/**
+ * Fired when user selects a specific category (or "all") and enters practice.
+ * Use to measure which categories are most popular.
+ */
+export function trackPracticeCategorySelected(category: string) {
+  gtag("event", "practice_category_selected", { category });
+}
+
+/**
+ * Fired when user exits or finishes a practice session.
+ * category: e.g. "core", "signs", "all", "favorites", "wrong"
+ */
 export function trackPracticeCompleted(
   mode: "all" | "favorites" | "wrong",
   questionsAnswered: number,
-  totalQuestions: number
+  totalQuestions: number,
+  category?: string
 ) {
   const completed = questionsAnswered === totalQuestions;
   gtag("event", "practice_completed", {
     mode,
+    category: category ?? mode,
     questions_answered: questionsAnswered,
     total_questions: totalQuestions,
-    completed,                                          // true = finished all, false = quit early
+    completed,
     completion_rate: Math.round((questionsAnswered / totalQuestions) * 100),
   });
 }
@@ -67,4 +80,11 @@ export function trackQuestionFavorited(questionId: number) {
 /** Fired when a question is marked as mastered and removed from wrong bank */
 export function trackQuestionMastered(questionId: number) {
   gtag("event", "question_mastered", { question_id: questionId });
+}
+
+// ── Support events ────────────────────────────────────────────────────────────
+
+/** Fired when user clicks the Buy Me a Coffee button */
+export function trackBuyMeCoffeeClicked() {
+  gtag("event", "buy_me_coffee_clicked");
 }

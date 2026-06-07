@@ -7,6 +7,7 @@ interface Props {
   onStartWrongPractice: () => void;
   onClearWrongBank: () => void;
   practiceProgress: { done: number; total: number; rounds: number };
+  onBuyMeCoffeeClick: () => void;
 }
 
 export default function HomeScreen({
@@ -18,9 +19,11 @@ export default function HomeScreen({
   onStartWrongPractice,
   onClearWrongBank,
   practiceProgress,
+  onBuyMeCoffeeClick,
 }: Props) {
   return (
-    <div className="mx-auto max-w-xl text-center">
+    <div className="mx-auto flex min-h-[calc(100vh-5rem)] max-w-xl flex-col text-center">
+      <div className="flex-1">
       <h1 className="text-3xl font-bold text-gray-900">
         NZ Driver Licence Mock Test
       </h1>
@@ -40,25 +43,11 @@ export default function HomeScreen({
           >
             Practice Mode 練習模式
           </button>
-          {/* Progress bar */}
-          <div className="mt-2 px-1">
-            <div className="mb-1 flex justify-between text-xs text-gray-500">
-              <span>
-                已練習 {practiceProgress.done} / {practiceProgress.total} 題
-              </span>
-              {practiceProgress.rounds > 0 && (
-                <span>第 {practiceProgress.rounds + 1} 輪</span>
-              )}
-            </div>
-            <div className="h-1.5 w-full overflow-hidden rounded-full bg-gray-200">
-              <div
-                className="h-full rounded-full bg-blue-400 transition-all"
-                style={{
-                  width: `${Math.round((practiceProgress.done / practiceProgress.total) * 100)}%`,
-                }}
-              />
-            </div>
-          </div>
+          {/* Progress text */}
+          <p className="mt-1.5 text-center text-xs text-gray-400">
+            已練習 {practiceProgress.done} / {practiceProgress.total} 題
+            {practiceProgress.rounds > 0 && `　· 第 ${practiceProgress.rounds + 1} 輪`}
+          </p>
         </div>
         <button
           type="button"
@@ -100,6 +89,40 @@ export default function HomeScreen({
             </button>
           </div>
         )}
+      </div>
+
+      </div>{/* end flex-1 */}
+
+      {/* Disclaimer — pinned to bottom */}
+      <div className="mt-10 border-t border-gray-200 pt-6 text-center text-xs text-gray-400 leading-relaxed">
+        <p>
+          本網站題目取自 NZTA 官方題庫，中文翻譯僅供參考。
+          <br />
+          正式考試內容及答案以 NZTA 官方為準，祝大家考試順利！
+        </p>
+        <p className="mt-2">
+          如有任何建議或疑問，歡迎來信：
+          <a
+            href="mailto:tzuycc@gmail.com"
+            className="text-blue-400 hover:underline"
+          >
+            tzuycc@gmail.com
+          </a>
+        </p>
+        <div className="mt-4 flex justify-center">
+          <a
+            href="https://www.buymeacoffee.com/jessie.tw"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onBuyMeCoffeeClick}
+          >
+            <img
+              src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+              alt="Buy Me A Coffee"
+              className="h-10"
+            />
+          </a>
+        </div>
       </div>
     </div>
   );

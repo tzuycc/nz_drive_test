@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { AnsweredQuestion, Question } from "@/lib/types";
 import rawQuestions from "@/data/questions.json";
 import { useFavorites } from "@/lib/favorites";
@@ -10,6 +10,8 @@ import {
   trackExamStarted,
   trackExamCompleted,
   trackPracticeStarted,
+  trackPracticeCategorySelected,
+  trackBuyMeCoffeeClicked,
 } from "@/lib/analytics";
 import HomeScreen from "@/components/HomeScreen";
 import CategorySelectScreen from "@/components/CategorySelectScreen";
@@ -36,6 +38,9 @@ export default function Page() {
   const [screen, setScreen] = useState<Screen>("home");
   const [examAnswers, setExamAnswers] = useState<AnsweredQuestion[]>([]);
   const [practiceCategory, setPracticeCategory] = useState<string | "all">("all");
+  // Defer localStorage-derived values until after hydration to avoid mismatch
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   // SINGLE SOURCE OF TRUTH — do NOT call these hooks in child components
   const { favorites, isFavorited, toggle } = useFavorites();
@@ -43,21 +48,31 @@ export default function Page() {
 
   // Practice progress: persisted order + current position
   const allBankIds = BANK.map((q) => q.id);
-  const { orderedIds, currentIndex, completedRounds, saveIndex } = usePracticeProgress(allBankIds);
-  const orderedBank = orderedIds.map((id) => BANK.find((q) => q.id === id)!);
+  const { orderedIds, practicedIds, practicedCount, completedRounds, markPracticed } =
+    usePracticeProgress(allBankIds);
 
   const favoritesBank = BANK.filter((q) => favorites.includes(q.id));
 
-  // Category bank for practice (used when practiceCategory !== "all")
-  const categoryBank = practiceCategory === "all"
-    ? orderedBank
-    : BANK.filter((q) => q.category === practiceCategory);
+  // "All Questions" bank: remaining questions in shuffled order
+  const allQuestionsBank = orderedIds
+    .filter((id) => !practicedIds.has(id))
+    .map((id) => BANK.find((q) => q.id === id)!);
 
-  // Category metadata with counts
-  const categoriesWithCount = CATEGORY_META.map((c) => ({
-    ...c,
-    count: BANK.filter((q) => q.category === c.id).length,
-  }));
+  // Category bank: remaining unpracticed questions; restart if all done
+  const categoryBank = practiceCategory === "all"
+    ? allQuestionsBank
+    : (() => {
+        const allInCat = BANK.filter((q) => q.category === practiceCategory);
+        const remaining = allInCat.filter((q) => !practicedIds.has(q.id));
+        return remaining.length > 0 ? remaining : allInCat;
+      })();
+
+  // Category metadata with practiced/total counts
+  const categoriesWithCount = CATEGORY_META.map((c) => {
+    const total = BANK.filter((q) => q.category === c.id).length;
+    const practiced = BANK.filter((q) => q.category === c.id && practicedIds.has(q.id)).length;
+    return { ...c, total, practiced };
+  });
   const wrongBank = BANK.filter((q) => wrongIds.includes(q.id));
 
   // IDs of wrong questions from the most recent exam (for ResultScreen quick-access)
@@ -71,14 +86,15 @@ export default function Page() {
       {screen === "home" && (
         <HomeScreen
           onStartPractice={() => setScreen("category-select")}
-          practiceProgress={{ done: currentIndex, total: BANK.length, rounds: completedRounds }}
+          practiceProgress={{ done: mounted ? practicedCount : 0, total: BANK.length, rounds: mounted ? completedRounds : 0 }}
           onStartExam={() => { trackExamStarted(); setScreen("exam"); }}
 
           favoritesCount={favoritesBank.length}
           onStartFavorites={() => { trackPracticeStarted("favorites"); setScreen("favorites"); }}
-          wrongCount={wrongBank.length}
+          wrongCount={mounted ? wrongBank.length : 0}
           onStartWrongPractice={() => { trackPracticeStarted("wrong"); setScreen("wrong-practice"); }}
           onClearWrongBank={clearWrongBank}
+          onBuyMeCoffeeClick={trackBuyMeCoffeeClicked}
         />
       )}
 
@@ -86,10 +102,11 @@ export default function Page() {
         <CategorySelectScreen
           categories={categoriesWithCount}
           totalCount={BANK.length}
-          practiceProgress={{ done: currentIndex, total: BANK.length, rounds: completedRounds }}
+          practicedCount={mounted ? practicedCount : 0}
+          completedRounds={mounted ? completedRounds : 0}
           onSelect={(cat) => {
             setPracticeCategory(cat);
-            trackPracticeStarted(cat === "all" ? "all" : "all"); // log as practice
+            trackPracticeCategorySelected(cat); // "all", "core", "signs", etc.
             setScreen("practice");
           }}
           onBack={() => setScreen("home")}
@@ -100,9 +117,9 @@ export default function Page() {
         <PracticeScreen
           bank={categoryBank}
           mode="all"
+          category={practiceCategory} // "all", "core", "signs", etc.
           noShuffle={practiceCategory === "all"}
-          startIndex={practiceCategory === "all" ? currentIndex : 0}
-          onIndexChange={practiceCategory === "all" ? saveIndex : undefined}
+          onQuestionAnswered={markPracticed}
           onExit={() => setScreen("category-select")}
           isFavorited={isFavorited}
           onToggleFavorite={toggle}

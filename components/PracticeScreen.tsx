@@ -14,14 +14,16 @@ interface Props {
   onToggleFavorite: (id: number) => void;
   /** Which practice mode — used for analytics */
   mode?: "all" | "favorites" | "wrong";
+  /** Specific category for analytics (e.g. "core", "signs"). Defaults to mode. */
+  category?: string;
   /** If provided, show "✓ 學會了" button when answered correctly (wrong-bank mode) */
   onMastered?: (id: number) => void;
-  /** Resume from this index (for persisted sessions). Default: 0 */
+  /** Start from this index (for persisted sessions). Default: 0 */
   startIndex?: number;
   /** Skip internal shuffle — bank is already in the desired order */
   noShuffle?: boolean;
-  /** Called with the new index whenever the session advances or exits */
-  onIndexChange?: (newIndex: number) => void;
+  /** Called when a question is answered and the user advances — used for progress tracking */
+  onQuestionAnswered?: (questionId: number) => void;
 }
 
 export default function PracticeScreen({
@@ -30,19 +32,18 @@ export default function PracticeScreen({
   isFavorited,
   onToggleFavorite,
   mode = "all",
+  category,
   onMastered,
   startIndex = 0,
   noShuffle = false,
-  onIndexChange,
+  onQuestionAnswered,
 }: Props) {
-  // Use provided order (noShuffle) or shuffle once on mount
   const [questions] = useState<Question[]>(() => noShuffle ? bank : shuffle(bank));
   const [index, setIndexState] = useState(startIndex);
   const [selected, setSelected] = useState<number | null>(null);
 
   const current = questions[index];
 
-  // Safety guard: should not happen with a non-empty bank
   if (!current) {
     return (
       <div className="mx-auto max-w-xl text-center text-gray-500">
@@ -56,22 +57,20 @@ export default function PracticeScreen({
 
   const answered = selected !== null;
   const isLast = index === questions.length - 1;
-  // Questions answered so far: index + 1 if current is answered, else index
   const questionsAnswered = answered ? index + 1 : index;
 
   function exit() {
-    // Save progress: if current Q was answered, advance past it; otherwise stay
-    const saveAt = answered ? index + 1 : index;
-    onIndexChange?.(saveAt);
-    trackPracticeCompleted(mode, questionsAnswered, questions.length);
+    // Mark current question as practiced if it was answered before exiting
+    if (answered) onQuestionAnswered?.(current.id);
+    trackPracticeCompleted(mode, questionsAnswered, questions.length, category);
     onExit();
   }
 
   function next() {
-    const newIndex = index + 1;
-    onIndexChange?.(newIndex);
+    // Mark current question as practiced, then advance
+    onQuestionAnswered?.(current.id);
     setSelected(null);
-    setIndexState(newIndex);
+    setIndexState(index + 1);
   }
 
   return (
@@ -86,7 +85,6 @@ export default function PracticeScreen({
         </button>
       </div>
 
-      {/* key={current.id} resets QuestionCard internal state (showChinese) on question change */}
       <QuestionCard
         key={current.id}
         question={current}
@@ -108,7 +106,7 @@ export default function PracticeScreen({
               onClick={() => {
                 trackQuestionMastered(current.id);
                 onMastered(current.id);
-                if (isLast) { onIndexChange?.(index + 1); exit(); }
+                if (isLast) exit();
                 else next();
               }}
               className="w-full rounded-xl bg-emerald-600 px-6 py-3 font-semibold text-white transition hover:bg-emerald-700"
