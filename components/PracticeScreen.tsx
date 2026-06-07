@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import type { Question } from "@/lib/types";
 import { shuffle } from "@/lib/quiz";
 import QuestionCard from "@/components/QuestionCard";
@@ -14,11 +14,25 @@ interface Props {
 }
 
 export default function PracticeScreen({ bank, onExit, isFavorited, onToggleFavorite }: Props) {
-  const questions = useMemo(() => shuffle(bank), [bank]);
+  // Shuffle once on mount using lazy initializer — stable across re-renders
+  const [questions] = useState<Question[]>(() => shuffle(bank));
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
 
   const current = questions[index];
+
+  // Safety guard: should not happen with a non-empty bank
+  if (!current) {
+    return (
+      <div className="mx-auto max-w-xl text-center text-gray-500">
+        <p>No questions available. 沒有可用的題目。</p>
+        <button type="button" onClick={onExit} className="mt-4 text-blue-600 hover:underline">
+          Back 返回
+        </button>
+      </div>
+    );
+  }
+
   const answered = selected !== null;
   const isLast = index === questions.length - 1;
 
