@@ -1689,12 +1689,12 @@
     "options": [
       { "en": "It marks the centre line of the road", "zh": "標示道路中心線" },
       { "en": "It marks a pedestrian crossing ahead", "zh": "標示前方有行人穿越道" },
-      { "en": "It marks the left edge of a motorway or on-ramp", "zh": "標示快速道路或匝道的左側邊緣" },
-      { "en": "It marks a bus lane boundary", "zh": "標示公車道邊界" }
+      { "en": "It marks the left edge of a motorway", "zh": "標示快速道路的左側邊緣" },
+      { "en": "It marks the location of a fire hydrant", "zh": "標示消防栓的位置" }
     ],
-    "correct": 2,
-    "explanation_en": "Blue reflective road studs mark the left edge of a motorway or motorway on-ramp, helping drivers stay within the lane at night.",
-    "explanation_zh": "藍色反光路釘標示快速道路或快速道路匝道的左側邊緣，幫助駕駛在夜間保持在車道內。"
+    "correct": 3,
+    "explanation_en": "Blue reflective road studs mark the location of a fire hydrant. They are placed on or just to the left of the centre line so emergency vehicles can quickly locate water sources.",
+    "explanation_zh": "藍色反光路釘標示消防栓的位置，放置在中心線上或其略左方，讓緊急車輛能快速找到水源。"
   },
   {
     "id": 113,
