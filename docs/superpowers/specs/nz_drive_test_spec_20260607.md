@@ -68,7 +68,7 @@ Each question in `/data/questions.json`:
 - Progress indicator: Question X / Y
 - Question card: English first, Chinese below (smaller text)
 - Four options: English first, Chinese below
-- On answer: immediately show ✅ or ❌ + expandable explanation (EN then ZH)
+- On answer: immediately show ✅ or ❌ + explanation panel (EN then ZH), always visible after answering
 - "Next Question" button to proceed
 - "End Practice" button to return to Home at any time
 
