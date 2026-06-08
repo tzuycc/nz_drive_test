@@ -53,7 +53,7 @@ export default function QuestionCard({
                 if (!isFavorited) trackQuestionFavorited(question.id);
                 onToggleFavorite(question.id);
               }}
-              className="w-[4.5rem] shrink-0 rounded-lg border border-gray-200 py-1 text-center text-xs leading-none transition hover:border-yellow-400 hover:bg-yellow-50"
+              className="w-[4.5rem] shrink-0 rounded-lg border border-gray-200 py-1 text-center text-xs text-gray-500 transition hover:border-yellow-400 hover:bg-yellow-50 hover:text-yellow-600"
               aria-label={isFavorited ? "Remove from favorites" : "Add to favorites"}
             >
               {isFavorited ? "⭐ 已收藏" : "☆ 收藏"}
