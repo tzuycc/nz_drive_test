@@ -33,10 +33,10 @@ export default function QuestionCard({
         </div>
       )}
 
-      {/* Question header: text + action buttons */}
-      <div className="flex items-start justify-between gap-3">
-        <p className="text-lg font-semibold text-gray-900">{question.question_en}</p>
-        <div className="flex shrink-0 items-center gap-2">
+      {/* Action buttons: mobile = above question (own row, right-aligned); desktop = inline right */}
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-3">
+        {/* Buttons row — on mobile sits above the question text */}
+        <div className="mb-2 flex justify-end gap-2 sm:order-2 sm:mb-0 sm:shrink-0">
           {/* Chinese toggle */}
           <button
             type="button"
@@ -60,6 +60,8 @@ export default function QuestionCard({
             </button>
           )}
         </div>
+        {/* Question text */}
+        <p className="text-lg font-semibold text-gray-900 sm:order-1">{question.question_en}</p>
       </div>
 
       {showChinese && (
